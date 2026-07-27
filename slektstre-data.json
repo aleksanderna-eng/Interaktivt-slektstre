@@ -2494,11 +2494,11 @@
   "85": {
    "id": 85,
    "name": "Jens Ivarson Fagervik",
-   "life": "ca. 1777 el. ca. 1784–10.04.1874",
+   "life": "1784–10.04.1874",
    "status": "documented",
    "place": "Fagervik, Ytre Holmedal",
    "work": "Husmann",
-   "notes": "Far til Klemet. Vigsla til sonen i 1847 namngjev han som Jens Iversen frå Fagervik. «Fjaler: gards- og ættesoge» stadfestar foreldreparet og opplyser at han døydde i 1874, 97 år gammal; dødsregisteret stadfestar 10. og 15. april 1874.\n\nEin sannsynleg, men ikkje sikker, identifikasjon i folketeljinga 1801: Jens Iversen, 17 år og ugift, «Hans børn» i hushaldet til bonde Iver Clemetsen (63) på Brattelie i same prestegjeld. Alderen gir då fødsel kring 1784, sju år seinare enn dødsregisteret tilseier — men høg oppgjeven alder ved død er ofte avrunda oppover, og 1801-teljinga treffer vanlegvis betre. Namnerekkja Klemet–Jens–Iver–Klemet(sen) er klassisk oppkalling og styrkjer koplinga.\n\nIdentifikasjonen bør stadfestast gjennom dåpen til Jens (søk 1774–1785), vigsla med Larine eller Fagervik-bolken i bygdeboka før Brattelie-lina kan reknast som sikker.",
+   "notes": "Far til Klemet. «Fjaler: gards- og ættesoge» (bind III) fører han som son av Iver Clemetsen og Anne Johannesdatter på Brattelie, fødd 1784 — dette avklarar aldersavviket: folketeljinga 1801 (Jens Iversen, 17 år, «Hans børn» hos Iver) peikar på 1784, medan dødsregisteret rundar oppover til «97 år» i 1874. Han var husmann på Fagervik, seinare på Steien, og gifta seg i 1811 med Larine Klemetsdatter.\n\nVigsla til sonen Klemet i 1847 namngjev han som Jens Iversen frå Fagervik; dødsregisteret stadfestar at han døydde 10. april 1874 og vart gravlagd 15. april.",
    "src": [
     [
      "Vigsel 1847: Johanne Catharine Furstenberg og Clemet Jenssen",
@@ -2515,6 +2515,10 @@
     [
      "Folketeljinga 1801: Jens Iversen (17) hos faren Iver Clemetsen på Brattelie",
      "https://www.digitalarkivet.no/census/person/pf01058401001894"
+    ],
+    [
+     "Fjaler: gards- og ættesoge, bind III – Brattelie (Iver Clemetsen Ulvedal)",
+     "https://www.nb.no/items/addcc5498762fb28de8fc8d55e2f1ab4"
     ]
    ],
    "deep": true
@@ -2522,15 +2526,19 @@
   "86": {
    "id": 86,
    "name": "Larine Klemetsdotter",
-   "life": "fødsels- og dødsår ukjende",
+   "life": "ca. 1785–1849",
    "status": "probable",
    "place": "Fagervik, Ytre Holmedal",
    "work": "",
-   "notes": "Mor til Klemet etter «Fjaler: gards- og ættesoge». Bygdeboka er ei sekundærkjelde, så sambandet bør stadfestast i dåpen til Klemet, i skifte eller i dødsinnførsla hennar før det kan reknast som fullt dokumentert.",
+   "notes": "Mor til Klemet, og kona til Jens Iversen. «Fjaler: gards- og ættesoge» (bind III) fører henne som dotter til Klemet Andersson Hauge, gift med Jens i 1811, og død i 1849, 64 år gammal (fødd kring 1785). Sonen Klemet (f. 1819) fekk truleg namnet etter morfaren Klemet Andersson.\n\nBygdeboka er ei sekundærkjelde; for fullt dokumentert bør sambandet stadfestast i dåpen til Klemet, i vigsla 1811, eller i dødsinnførsla hennar frå 1849.",
    "src": [
     [
      "Fjaler: gards- og ættesoge, bind 1 – Fagervik",
      "https://www.nb.no/items/f49f1a3e264aa7ff3cd7df4196f13984"
+    ],
+    [
+     "Fjaler: gards- og ættesoge, bind III – Hauge og Fagervik",
+     "https://www.nb.no/items/addcc5498762fb28de8fc8d55e2f1ab4"
     ]
    ],
    "deep": true
@@ -2538,15 +2546,19 @@
   "87": {
    "id": 87,
    "name": "Iver Clemetsen",
-   "life": "f. ca. 1738",
-   "status": "probable",
-   "place": "Brattelie, Ytre Holmedal",
-   "work": "Bonde og gardbeboar",
-   "notes": "Sannsynleg far til Jens. I 1801 var han 63 år, husbonde på Brattelie og i sitt andre ekteskap, med kona Kari Tollachsdatter (52, hennar fyrste).\n\nBorna Johannes (25), Anne (20) og Jens (17) står som «Hans børn» — altså frå fyrste ekteskapet — medan berre Ane (11) er «Begge deres barn». Mora til Jens er difor truleg ei ukjend fyrste kone, ikkje Kari. Patronymet Clemetsen forklarer namnevalet då Jens kalla sonen sin Klemet i 1819.\n\nKoplinga kviler på namn, stad og hushaldsrelasjon i 1801 og er ikkje endeleg prova; aldersavviket mot dødsregisteret til Jens (fødd ca. 1784 mot ca. 1777) må avklarast fyrst.",
+   "life": "ca. 1738–1801",
+   "status": "documented",
+   "place": "Brattelie (frå Ulvedal), Ytre Holmedal",
+   "work": "Bonde; brukar av Brattelid 1771–1802, eigar 1802",
+   "notes": "Far til Jens. «Fjaler: gards- og ættesoge» (bind III) fører han som Iver Clemetsen frå Ulvedal, brorson av Jakob Iversen Ulvedal som dreiv Brattelid 1738–1770. Iver var sjølv brukar av Brattelid 1771–1802 og vart eigar i 1802. Han døydde i 1801.\n\nFyrste kona var Anne Johannesdatter (død 1787). Med henne fekk han Johannes (f. 1776, som overtok garden), Anne den eldre (f. 1780) og Jens (f. 1784) — sistnemnde fører lina vidare. Dette avklarar 1801-identifikasjonen: Jens Iversen, 17 år i 1801, står som «Hans børn» i Ivers hushald.\n\nSom enkjemann gifta Iver seg att med Kari Andersdotter Skadal (død 1828, 80 år gammal), og fekk med henne dottera Anne den yngre (f. 1790, gift 1825 med Anders Andersson Sundal). Folketeljinga 1801 vart lesen som «Kari Tollachsdatter, 52»; alderen svarar til Kari Andersdotter, så det er truleg same kvinne med eit avvik i patronymet mellom kjeldene. Kari er uansett ikkje i den rette lina, sidan Jens stamma frå det fyrste ekteskapet.",
    "src": [
     [
      "Folketeljinga 1801: Jens Iversen (17) hos faren Iver Clemetsen på Brattelie",
      "https://www.digitalarkivet.no/census/person/pf01058401001894"
+    ],
+    [
+     "Fjaler: gards- og ættesoge, bind III – Brattelie (Iver Clemetsen Ulvedal)",
+     "https://www.nb.no/items/addcc5498762fb28de8fc8d55e2f1ab4"
     ]
    ],
    "deep": true
@@ -3910,6 +3922,38 @@
     ]
    ],
    "deep": true
+  },
+  "162": {
+   "id": 162,
+   "name": "Anne Johannesdatter",
+   "life": "–1787",
+   "status": "probable",
+   "place": "Brattelie, Ytre Holmedal",
+   "work": "",
+   "notes": "Mor til Jens og fyrste kona til Iver Clemetsen på Brattelie, etter «Fjaler: gards- og ættesoge» (bind III). Ho døydde i 1787. Med Iver fekk ho Johannes (f. 1776), Anne den eldre (f. 1780) og Jens (f. 1784), som fører lina vidare.\n\nBygdeboka er ei sekundærkjelde. For å gå frå sannsynleg til dokumentert bør namnet stadfestast i dåpen til eit av borna (som namngjev mora), i vigsla hennar med Iver, eller i dødsinnførsla frå 1787.",
+   "src": [
+    [
+     "Fjaler: gards- og ættesoge, bind III – Brattelie (Iver Clemetsen Ulvedal)",
+     "https://www.nb.no/items/addcc5498762fb28de8fc8d55e2f1ab4"
+    ]
+   ],
+   "deep": true
+  },
+  "163": {
+   "id": 163,
+   "name": "Klemet Andersson Hauge",
+   "life": "datoar ukjende",
+   "status": "probable",
+   "place": "Hauge, Fjaler (Ytre Holmedal)",
+   "work": "",
+   "notes": "Far til Larine Klemetsdotter, som gifta seg med Jens Iversen i 1811. Namngjeven i «Fjaler: gards- og ættesoge» (bind III). Dottersonen Klemet Jensen (f. 1819) fekk truleg namnet sitt etter han.\n\nBygdeboka er ei sekundærkjelde; opphavet er ikkje stadfesta i primærkjelde enno.",
+   "src": [
+    [
+     "Fjaler: gards- og ættesoge, bind III – Hauge",
+     "https://www.nb.no/items/addcc5498762fb28de8fc8d55e2f1ab4"
+    ]
+   ],
+   "deep": true
   }
  },
  "deepLinks": {
@@ -4205,11 +4249,15 @@
   "85": {
    "child": 32,
    "parents": [
-    87
+    87,
+    162
    ]
   },
   "86": {
-   "child": 32
+   "child": 32,
+   "parents": [
+    163
+   ]
   },
   "87": {
    "child": 85
@@ -4478,6 +4526,12 @@
   },
   "161": {
    "child": 130
+  },
+  "162": {
+   "child": 85
+  },
+  "163": {
+   "child": 86
   }
  },
  "generation7": {
@@ -4623,6 +4677,7 @@
     132,
     133,
     87,
+    162,
     66,
     67,
     88,
@@ -4630,7 +4685,8 @@
     68,
     69,
     99,
-    100
+    100,
+    163
    ]
   },
   {
