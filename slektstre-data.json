@@ -2,7 +2,7 @@
  "meta": {
   "versjon": 30,
   "dato": "2026-07-27",
-  "note": "Data skilt frå visning. people.src er [tittel,url]-par; alle drifts-/skifte-tillegg er innbakte. Rediger denne fila."
+  "note": "Data skilt frå visning. media[personId] er ei liste med {type:\"image\"|\"video\", src, cap}. Legg til fleire objekt for fleire bilete; bruk type:\"video\" og ein videofil (t.d. video/…​.mp4) for film. Rediger denne fila for å endre innhald."
  },
  "people": {
   "1": {
@@ -4677,38 +4677,62 @@
   "88": "Sidelinje · bror til Jan Fasmer",
   "89": "Sidelinje · bror til Jan Fasmer"
  },
- "photos": {
-  "1": {
-   "img": "bileteslekt/person-1.jpg",
-   "cap": "Aleksander med blomekrans. Familiefoto, 1990-åra."
-  },
-  "2": {
-   "img": "bileteslekt/person-2.jpg",
-   "cap": "Agnar på Store Skagastølstind. Familiefoto, udatert."
-  },
-  "3": {
-   "img": "bileteslekt/person-3.jpg",
-   "cap": "Margaret ved elva. Familiefoto, 2000-talet."
-  },
-  "4": {
-   "img": "bileteslekt/person-4.jpg",
-   "cap": "Arne Toralf i uthuset. Familiefoto."
-  },
-  "6": {
-   "img": "bileteslekt/person-6.jpg",
-   "cap": "Martin på Løvstakken, med Bergen under seg. Familiefoto, udatert."
-  },
-  "7": {
-   "img": "bileteslekt/person-7.jpg",
-   "cap": "Perdy Aleksandra. Familiefoto, udatert. Varsamt restaurert: riper og flekkskade dempa; ingen fargar eller detaljar er lagde til."
-  },
-  "12": {
-   "img": "bileteslekt/person-12.jpg",
-   "cap": "Messestanden til A/S R. Nygaard, truleg 1950-åra: Evalet- og Hoovermatic-vaskemaskiner, komfyrar og radioapparat til 628 kroner. Firmaet vart starta i 1935 av Rasmus og Martin på Laksevåg. Familiefoto, varsamt skjerpt; ingenting er lagt til."
-  },
-  "14": {
-   "img": "bileteslekt/person-14.jpg",
-   "cap": "Frå familiealbumet, merkt «Anton». Udatert. Varsamt restaurert: støv fjerna og tonebreidda retta opp; ingen fargar eller detaljar er lagde til."
-  }
+ "media": {
+  "1": [
+   {
+    "type": "image",
+    "src": "bileteslekt/person-1.jpg",
+    "cap": "Aleksander med blomekrans. Familiefoto, 1990-åra."
+   }
+  ],
+  "2": [
+   {
+    "type": "image",
+    "src": "bileteslekt/person-2.jpg",
+    "cap": "Agnar på Store Skagastølstind. Familiefoto, udatert."
+   }
+  ],
+  "3": [
+   {
+    "type": "image",
+    "src": "bileteslekt/person-3.jpg",
+    "cap": "Margaret ved elva. Familiefoto, 2000-talet."
+   }
+  ],
+  "4": [
+   {
+    "type": "image",
+    "src": "bileteslekt/person-4.jpg",
+    "cap": "Arne Toralf i uthuset. Familiefoto."
+   }
+  ],
+  "6": [
+   {
+    "type": "image",
+    "src": "bileteslekt/person-6.jpg",
+    "cap": "Martin på Løvstakken, med Bergen under seg. Familiefoto, udatert."
+   }
+  ],
+  "7": [
+   {
+    "type": "image",
+    "src": "bileteslekt/person-7.jpg",
+    "cap": "Perdy Aleksandra. Familiefoto, udatert. Varsamt restaurert: riper og flekkskade dempa; ingen fargar eller detaljar er lagde til."
+   }
+  ],
+  "12": [
+   {
+    "type": "image",
+    "src": "bileteslekt/person-12.jpg",
+    "cap": "Messestanden til A/S R. Nygaard, truleg 1950-åra: Evalet- og Hoovermatic-vaskemaskiner, komfyrar og radioapparat til 628 kroner. Firmaet vart starta i 1935 av Rasmus og Martin på Laksevåg. Familiefoto, varsamt skjerpt; ingenting er lagt til."
+   }
+  ],
+  "14": [
+   {
+    "type": "image",
+    "src": "bileteslekt/person-14.jpg",
+    "cap": "Frå familiealbumet, merkt «Anton». Udatert. Varsamt restaurert: støv fjerna og tonebreidda retta opp; ingen fargar eller detaljar er lagde til."
+   }
+  ]
  }
 }
