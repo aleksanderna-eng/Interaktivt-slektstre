@@ -11,7 +11,10 @@
     .kart-stage{border:1px solid var(--line);border-radius:17px;background:color-mix(in srgb,var(--card) 94%,var(--panel));overflow:hidden;position:relative}
     .kart-stage svg{display:block;width:100%;height:auto}
     .fjord-water{fill:url(#watergrad)}
-    .fjord-wave{fill:none;stroke:color-mix(in srgb,var(--card) 55%,var(--water));stroke-width:1.4;opacity:.5}
+    .fjord-wave{fill:none;stroke:color-mix(in srgb,var(--card) 55%,var(--water));stroke-width:1.2;opacity:.34;stroke-dasharray:7 9}
+    .shore{fill:none;stroke:color-mix(in srgb,var(--pine) 55%,var(--water));stroke-width:1.5;opacity:.75}
+    .leader{stroke:color-mix(in srgb,var(--open) 70%,var(--line));stroke-width:1;fill:none}
+    .sea-hint{font-size:10.5px;fill:var(--muted);font-weight:700;letter-spacing:.03em;pointer-events:none}
     .gard-pin{cursor:pointer}
     .gard-dot{fill:var(--pine);stroke:var(--card);stroke-width:2;transition:fill .12s,r .12s}
     .gard-pin:hover .gard-dot{fill:var(--gold)}
@@ -56,7 +59,7 @@
     <div>
       <div class="kart-kicker">Slektskart</div>
       <h1 class="kart-title">Slekta langs Dalsfjorden</h1>
-      <p class="kart-sub">Eit stilisert kart over gardane i Fjaler og Ytre Holmedal der greina høyrer heime. Trykk ein gard for å sjå kven som budde der. Kartet er skjematisk — gardane står plasserte etter faktiske koordinatar, men fjorden er teikna fritt.</p>
+      <p class="kart-sub">Gardane i Fjaler og Ytre Holmedal der greina høyrer heime, plasserte etter faktiske koordinatar langs eit forenkla omriss av Dalsfjorden. Trykk ein gard for å sjå kven som budde der. Legg merke til at Rivedal ligg på <em>nordsida</em> av fjorden, medan resten av greina held til på sørsida — slekta har krysse vatnet.</p>
     </div>
     <a class="kart-back" href="index.html">← Til slektstreet</a>
   </div>
@@ -72,7 +75,7 @@
     <span><i></i>Gard med folk frå treet</span>
     <span><i class="lg-water"></i>Dalsfjorden (skjematisk)</span>
   </div>
-  <p class="kart-note">Fleire gardar kjem etter kvart som koordinatane deira blir stadfesta — akkurat som opne plassar i treet ventar på ei kjelde.</p>
+  <p class="kart-note">Gardane står på sine <b>faktiske</b> koordinatar i rett innbyrdes forhold. Sjølve kystlina er eit <b>forenkla omriss</b> av Dalsfjorden — nøyaktig nok til å vise kva side av vatnet kvar gard ligg på, men ikkje ei detaljert kystline. Fleire gardar kjem etter kvart som koordinatane deira blir stadfesta — akkurat som opne plassar i treet ventar på ei kjelde.</p>
 
   <script>
   (() => {
@@ -89,60 +92,79 @@
       }).sort((a,b)=>a.id-b.id);
     }
 
-    // --- projeksjon: lat/lng -> svg, sørstranda nedanfor fjorden ---
-    function project(){
-      const W=940, H=430, m=66, shoreY=150, bandTop=shoreY+26, bandBot=H-52;
-      const coord = gardar.filter(g=>g.lat&&g.lng);
-      const k = Math.cos(61.34*Math.PI/180);
-      const pts = coord.map(g=>({g, px:g.lng*k, py:g.lat}));
-      const pxs=pts.map(p=>p.px), pys=pts.map(p=>p.py);
-      let minx=Math.min(...pxs), maxx=Math.max(...pxs), miny=Math.min(...pys), maxy=Math.max(...pys);
-      const dx=(maxx-minx)||1e-4, dy=(maxy-miny)||1e-4;
-      pts.forEach(p=>{
-        const nx=(p.px-minx)/dx;              // 0 vest .. 1 aust
-        const ny=(p.py-miny)/dy;              // 0 sør .. 1 nord
-        p.x = m + nx*(W-2*m);
-        p.y = bandBot - ny*(bandBot-bandTop); // nord -> nær fjorden
-      });
-      return {pts, W, H, shoreY};
-    }
+    // --- Forenkla omriss av Dalsfjorden (geografiske punkt, vest -> aust) ---
+    const SOER=[[5.03,61.3365],[5.12,61.3435],[5.17,61.3475],[5.22,61.3505],[5.27,61.3538],[5.32,61.3557],[5.365,61.3576],[5.385,61.3586]];
+    const NORD=[[5.03,61.3520],[5.12,61.3580],[5.17,61.3600],[5.22,61.3616],[5.27,61.3628],[5.32,61.3636],[5.365,61.3624],[5.385,61.3600]];
+    const BB={lonMin:5.05, lonMax:5.42, latMin:61.320, latMax:61.375};
+    const W=940, PAD=42;
+    const KLAT=Math.cos(61.35*Math.PI/180);
+    const INNER_W = W-2*PAD;
+    const INNER_H = INNER_W * (BB.latMax-BB.latMin) / ((BB.lonMax-BB.lonMin)*KLAT);
+    const H = Math.round(INNER_H + 2*PAD);
 
-    function wavePath(W, y, amp, W2){
-      let d=`M0 0 L${W} 0 L${W} ${y} `;
-      for(let x=W; x>=0; x-=20){ const yy=y+amp*Math.sin(x/58); d+=`L${x.toFixed(1)} ${yy.toFixed(1)} `; }
-      return d+"Z";
+    function proj(lat,lng){
+      const nx=(lng-BB.lonMin)/(BB.lonMax-BB.lonMin);
+      const ny=(BB.latMax-lat)/(BB.latMax-BB.latMin);
+      return {x: PAD + nx*INNER_W, y: PAD + ny*INNER_H};
     }
-    function waveLine(W, y, amp){
-      let d=`M0 ${y} `;
-      for(let x=0; x<=W; x+=20){ const yy=y+amp*Math.sin((x+30)/58); d+=`L${x} ${yy.toFixed(1)} `; }
-      return d;
+    // Catmull-Rom -> mjuk bezier-kurve
+    function smooth(pts, close){
+      if(pts.length<2) return "";
+      let d=`M${pts[0].x.toFixed(1)} ${pts[0].y.toFixed(1)}`;
+      for(let i=0;i<pts.length-1;i++){
+        const p0=pts[i-1]||pts[i], p1=pts[i], p2=pts[i+1], p3=pts[i+2]||p2;
+        const c1x=p1.x+(p2.x-p0.x)/6, c1y=p1.y+(p2.y-p0.y)/6;
+        const c2x=p2.x-(p3.x-p1.x)/6, c2y=p2.y-(p3.y-p1.y)/6;
+        d+=` C${c1x.toFixed(1)} ${c1y.toFixed(1)}, ${c2x.toFixed(1)} ${c2y.toFixed(1)}, ${p2.x.toFixed(1)} ${p2.y.toFixed(1)}`;
+      }
+      return d + (close?" Z":"");
+    }
+    function project(){
+      const pts = gardar.filter(g=>g.lat&&g.lng).map(g=>({g, ...proj(g.lat,g.lng)}));
+      // etikett-plassering: unngå kollisjon ved å skuve nedover
+      const sorted=[...pts].sort((a,b)=>a.y-b.y);
+      let lastY=-99;
+      sorted.forEach(p=>{ p.ly = Math.max(p.y+4, lastY+15); lastY=p.ly; });
+      return {pts, W, H};
     }
 
     function drawMap(){
-      const {pts, W, H, shoreY} = project();
+      const {pts, W, H} = project();
       const parts=[];
-      parts.push(`<defs><linearGradient id="watergrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="color-mix(in srgb,var(--water) 82%,#2c4a52)"/><stop offset="1" stop-color="var(--water)"/></linearGradient></defs>`);
+      parts.push(`<defs><linearGradient id="watergrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="color-mix(in srgb,var(--water) 78%,#28454d)"/><stop offset="1" stop-color="var(--water)"/></linearGradient></defs>`);
       parts.push(`<rect x="0" y="0" width="${W}" height="${H}" fill="var(--panel)"/>`);
-      parts.push(`<path class="fjord-water" d="${wavePath(W, shoreY, 13)}"/>`);
-      parts.push(`<path class="fjord-wave" d="${waveLine(W, shoreY-24, 9)}"/>`);
-      parts.push(`<path class="fjord-wave" d="${waveLine(W, shoreY-46, 7)}" opacity="0.32"/>`);
-      parts.push(`<text class="fjord-name" x="${W/2}" y="${shoreY-64}" text-anchor="middle">DALSFJORDEN</text>`);
+
+      const sp=SOER.map(([lo,la])=>proj(la,lo));
+      const np=NORD.map(([lo,la])=>proj(la,lo));
+      // fjord-polygon: sørstranda vestfrå, så nordstranda attende
+      const fjordPath = smooth(sp,false) + " " + smooth([...np].reverse(),false).replace(/^M/,"L") + " Z";
+      parts.push(`<path class="fjord-water" d="${fjordPath}"/>`);
+      // kystliner
+      parts.push(`<path class="shore" d="${smooth(sp,false)}"/>`);
+      parts.push(`<path class="shore" d="${smooth(np,false)}"/>`);
+      // midtakse-krusning
+      const mid=sp.map((p,i)=>({x:(p.x+np[i].x)/2, y:(p.y+np[i].y)/2}));
+      parts.push(`<path class="fjord-wave" d="${smooth(mid,false)}"/>`);
+      const midName=mid[Math.floor(mid.length/2)];
+      parts.push(`<text class="fjord-name" x="${midName.x.toFixed(0)}" y="${(midName.y+5).toFixed(0)}" text-anchor="middle">DALSFJORDEN</text>`);
       parts.push(`<text class="compass" x="26" y="30">N ↑</text>`);
-      parts.push(`<text class="compass" x="${W-70}" y="${H-20}">vest ← → aust</text>`);
+      parts.push(`<text class="sea-hint" x="${(PAD-6).toFixed(0)}" y="${(proj(61.3445,5.05).y).toFixed(0)}">← ut mot havet</text>`);
 
       pts.forEach(p=>{
         const g=p.g, n=folkPaaGard(g).length, sel=selected&&selected.namn===g.namn;
-        const lx=(p.x+12).toFixed(1), ly=(p.y+4).toFixed(1);
+        const lx=(p.x+12).toFixed(1), ly=p.ly.toFixed(1);
+        const leader = Math.abs(p.ly-(p.y+4))>2
+          ? `<path class="leader" d="M${(p.x+5).toFixed(1)} ${p.y.toFixed(1)} L${(p.x+9).toFixed(1)} ${(p.ly-4).toFixed(1)}"/>` : "";
         if(g.landmark){
           parts.push(`<g class="gard-pin landmark" data-gard="${g.namn}">
             <rect class="mark-land" x="${(p.x-4).toFixed(1)}" y="${(p.y-4).toFixed(1)}" width="8" height="8" rx="1.5"/>
-            <text class="mark-land-label" x="${lx}" y="${ly}">${g.namn}</text></g>`);
+            ${leader}<text class="mark-land-label" x="${lx}" y="${ly}">${g.namn}</text></g>`);
           return;
         }
         parts.push(`<g class="gard-pin ${sel?'sel':''}" data-gard="${g.namn}">
           <circle class="gard-ring" cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="11"/>
           <circle class="gard-dot" cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="6"/>
-          <text class="gard-label" x="${lx}" y="${ly}">${g.namn}${n?` <tspan class="gard-count">· ${n}</tspan>`:""}</text>
+          ${leader}<text class="gard-label" x="${lx}" y="${ly}">${g.namn}${n?` <tspan class="gard-count">· ${n}</tspan>`:""}</text>
         </g>`);
       });
       $("kart-stage").innerHTML=`<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kart over Dalsfjord-gardane">${parts.join("")}</svg>`;
