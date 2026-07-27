@@ -133,7 +133,7 @@
       $("tree-title").textContent=branch.title;
       $("tree-caption").textContent=currentBranch==="all"?"Vel ei grein for full djupn":currentBranch==="deep"?"Kjende direkte anar · gule ledd er ikkje endeleg prova":"Alle seks ledda viste";
       const groups=currentBranch==="deep"?deepGroups:idsForBranch(branch.root).map((ids,i)=>({num:i+1,label:genNames[i],ids}));
-      $("tree-bands").innerHTML=groups.map(group=>`<section class="gen-band ${currentBranch==='deep'?'deep-band':''}"><div class="gen-head"><span class="gen-num">${group.num}</span><span class="gen-name">${group.label}</span></div><div class="gen-grid">${group.ids.map(id=>card(people[id])).join("")}</div></section>`).join("");
+      $("tree-bands").innerHTML=groups.map(group=>`<section class="gen-band ${currentBranch==='deep'?'deep-band':''}"><div class="gen-head"><span class="gen-num">${group.num}</span><span class="gen-name">${group.label}</span></div><div class="gen-grid">${group.ids.filter(id=>people[id]).map(id=>card(people[id])).join("")}</div></section>`).join("");
     }
     // Eksplisitte slektsband for djuplina (der ahnentafel-matematikken ikkje gjeld).
     // Ahnentafel-plass i sjuande ledd -> person-ID i datasettet.
