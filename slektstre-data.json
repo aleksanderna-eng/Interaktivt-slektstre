@@ -4818,5 +4818,89 @@
     "cap": "Frå familiealbumet, merkt «Anton». Udatert. Varsamt restaurert: støv fjerna og tonebreidda retta opp; ingen fargar eller detaljar er lagde til."
    }
   ]
- }
+ },
+ "gardar": [
+  {
+   "namn": "Rivedal",
+   "sokn": "Ytre Holmedal",
+   "lat": 61.3675,
+   "lng": 5.2646,
+   "match": [
+    "Rivedal"
+   ],
+   "merknad": "Nedgarden II, løpenr. 45. Søren Hansen, Dorthe, Mattis og Hans si slekt."
+  },
+  {
+   "namn": "Fagervik",
+   "sokn": "Ytre Holmedal",
+   "lat": 61.3477,
+   "lng": 5.2775,
+   "match": [
+    "Fagervik"
+   ],
+   "merknad": "Husmannsplass. Jens Iversen og Larine Klemetsdotter."
+  },
+  {
+   "namn": "Tysse",
+   "sokn": "Fjaler",
+   "lat": 61.3446,
+   "lng": 5.2671,
+   "match": [
+    "Tysse"
+   ],
+   "merknad": "Dorthe Nielsdatter var fødd her i 1759. Landmark-slekta høyrde til Tysse."
+  },
+  {
+   "namn": "Hauge",
+   "sokn": "Fjaler",
+   "lat": 61.3405,
+   "lng": 5.2647,
+   "match": [
+    "Hauge"
+   ],
+   "merknad": "Klemet Andersson, far til Larine."
+  },
+  {
+   "namn": "Indre Åsnes",
+   "sokn": "Fjaler",
+   "lat": 61.3402,
+   "lng": 5.2128,
+   "match": [
+    "Åsnes"
+   ],
+   "merknad": "Åsnes-lina; bruket «Unde gar’en». Arne, Hans Magnus, Tomas og Marte."
+  },
+  {
+   "namn": "Dale",
+   "sokn": "Fjaler",
+   "lat": 61.3588,
+   "lng": 5.3973,
+   "landmark": true,
+   "merknad": "Kyrkje- og administrasjonsstaden i Fjaler."
+  },
+  {
+   "namn": "Brattelie",
+   "sokn": "Ytre Holmedal",
+   "match": [
+    "Brattelie"
+   ],
+   "merknad": "Iver Clemetsen og Anne Johannesdatter. Ventar på stadfesta koordinatar."
+  },
+  {
+   "namn": "Andalsvik",
+   "sokn": "Ytre Holmedal",
+   "match": [
+    "Andalsvik"
+   ],
+   "merknad": "Klemet Jensen sitt leigebruk, løpenr. 67. Ventar på koordinatar."
+  },
+  {
+   "namn": "Langenes",
+   "sokn": "Fjaler",
+   "match": [
+    "Langenes"
+   ],
+   "merknad": "Mellomstasjon for Tomas- og Hans Magnus-huslyden. Ventar på koordinatar."
+  }
+ ]
 }
