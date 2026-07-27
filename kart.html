@@ -16,6 +16,9 @@
     .gard-tip.sel{background:var(--gold);color:var(--ink);border-color:var(--ink)}
     .gard-tip::before{display:none}
     .leaflet-bar a{color:var(--pine)}
+    .leaflet-control-attribution{font-size:9px !important;background:color-mix(in srgb,var(--card) 78%,transparent) !important;color:color-mix(in srgb,var(--muted) 80%,transparent) !important;padding:0 4px !important;border-radius:5px 0 0 0}
+    .leaflet-control-attribution a{color:color-mix(in srgb,var(--muted) 85%,transparent) !important;text-decoration:none}
+    .leaflet-control-attribution:hover{background:var(--card) !important;color:var(--muted) !important}
     .kart-side{border:1px solid var(--line);border-radius:17px;background:color-mix(in srgb,var(--card) 94%,var(--panel));padding:16px;position:sticky;top:10px}
     .side-eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:800}
     .side-name{font-family:Georgia,serif;font-size:22px;line-height:1.05;margin:5px 0 3px}
@@ -111,7 +114,7 @@
       map = L.map('kart-map', {scrollWheelZoom:true, zoomControl:true});
       L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png', {
         maxZoom:19, subdomains:'abcd',
-        attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>-bidragsytarar &copy; <a href="https://carto.com/attributions">CARTO</a>'
+        attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>, <a href="https://carto.com/attributions">CARTO</a>'
       }).addTo(map);
       coord.forEach(g=>{
         const mk = L.circleMarker([g.lat, g.lng], {
