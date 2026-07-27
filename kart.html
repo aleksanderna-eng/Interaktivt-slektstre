@@ -1,0 +1,189 @@
+<div class="kart-app" id="kart-app">
+  <style>
+    .kart-app{--ink:var(--color-text-primary,#17211b);--muted:var(--color-text-secondary,#657069);--panel:var(--color-background-secondary,#f4f0e7);--card:var(--color-background-primary,#fffdf8);--line:var(--color-border-secondary,#d7d2c8);--pine:#204d3b;--moss:#557259;--gold:#c58a38;--rose:#9a5d55;--violet:#725987;--open:#8a8d8b;--water:#5f7d86;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;max-width:100%;overflow-x:clip;background:linear-gradient(145deg,color-mix(in srgb,var(--panel) 82%,var(--card)),var(--card));border:1px solid var(--line);border-radius:22px;box-shadow:0 18px 45px color-mix(in srgb,var(--ink) 10%,transparent);padding:20px}
+    .kart-top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-wrap:wrap}
+    .kart-kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--moss);font-weight:800}
+    .kart-title{font-family:Georgia,"Times New Roman",serif;font-size:clamp(24px,3.8vw,38px);line-height:1;margin:7px 0 8px;font-weight:700;letter-spacing:-.03em}
+    .kart-sub{color:var(--muted);line-height:1.55;max-width:640px;margin:0;font-size:13.5px}
+    .kart-back{flex:none;border:1px solid color-mix(in srgb,var(--pine) 45%,var(--line));background:var(--card);color:var(--pine);border-radius:999px;padding:9px 14px;font-size:12px;font-weight:800;text-decoration:none;white-space:nowrap}
+    .kart-back:hover{background:var(--pine);color:#fff}
+    .kart-main{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(240px,.62fr);gap:15px;align-items:start;margin-top:16px}
+    .kart-stage{border:1px solid var(--line);border-radius:17px;background:color-mix(in srgb,var(--card) 94%,var(--panel));overflow:hidden;position:relative}
+    .kart-stage svg{display:block;width:100%;height:auto}
+    .fjord-water{fill:url(#watergrad)}
+    .fjord-wave{fill:none;stroke:color-mix(in srgb,var(--card) 55%,var(--water));stroke-width:1.4;opacity:.5}
+    .gard-pin{cursor:pointer}
+    .gard-dot{fill:var(--pine);stroke:var(--card);stroke-width:2;transition:fill .12s,r .12s}
+    .gard-pin:hover .gard-dot{fill:var(--gold)}
+    .gard-pin.sel .gard-dot{fill:var(--gold);stroke:var(--ink)}
+    .gard-ring{fill:none;stroke:var(--gold);stroke-width:2;opacity:0;transition:opacity .15s}
+    .gard-pin.sel .gard-ring{opacity:1}
+    .gard-label{font-family:Georgia,serif;font-size:13px;fill:var(--ink);pointer-events:none}
+    .gard-pin:hover .gard-label,.gard-pin.sel .gard-label{font-weight:700}
+    .gard-count{font-size:10px;fill:var(--muted);pointer-events:none}
+    .mark-land{fill:var(--moss);opacity:.55}
+    .mark-land-label{font-size:11px;fill:var(--moss);font-weight:700;pointer-events:none;letter-spacing:.02em}
+    .fjord-name{font-family:Georgia,serif;font-size:16px;fill:color-mix(in srgb,var(--card) 72%,var(--water));font-style:italic;letter-spacing:.14em;pointer-events:none}
+    .compass{font-size:11px;fill:var(--muted);font-weight:800;pointer-events:none}
+    .kart-side{border:1px solid var(--line);border-radius:17px;background:color-mix(in srgb,var(--card) 94%,var(--panel));padding:16px;position:sticky;top:10px}
+    .side-eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:800}
+    .side-name{font-family:Georgia,serif;font-size:22px;line-height:1.05;margin:5px 0 3px}
+    .side-sokn{font-size:12px;color:var(--moss);font-weight:800;margin-bottom:9px}
+    .side-merknad{font-size:12.5px;line-height:1.5;color:var(--muted);margin:0 0 13px;font-style:italic}
+    .side-folk{display:grid;gap:7px}
+    .folk-card{position:relative;text-align:left;border:1px solid var(--line);border-left-width:3px;border-radius:11px;background:var(--card);padding:9px 11px;width:100%;cursor:default}
+    .folk-card.documented{border-left-color:var(--pine)}.folk-card.family{border-left-color:var(--violet)}.folk-card.probable{border-left-color:var(--gold)}.folk-card.open{border-left-color:color-mix(in srgb,var(--open) 55%,var(--line))}
+    .folk-name{display:block;font-family:Georgia,serif;font-weight:700;font-size:13.5px;line-height:1.15}
+    .folk-life{display:block;color:var(--muted);font-size:11px;margin-top:3px}
+    .folk-work{display:block;color:var(--moss);font-size:10.5px;margin-top:2px}
+    .folk-dot{position:absolute;right:9px;top:10px;width:8px;height:8px;border-radius:50%}
+    .documented .folk-dot{background:var(--pine)}.family .folk-dot{background:var(--violet)}.probable .folk-dot{background:var(--gold)}.open .folk-dot{background:var(--open)}
+    .side-empty{font-size:12.5px;color:var(--muted);line-height:1.5}
+    .kart-wait{margin-top:15px;padding:13px 15px;border-radius:14px;background:color-mix(in srgb,var(--panel) 76%,var(--card));border:1px dashed color-mix(in srgb,var(--gold) 40%,var(--line))}
+    .kart-wait h3{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 7px}
+    .wait-list{display:flex;flex-wrap:wrap;gap:8px}
+    .wait-chip{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:6px 11px;font-size:12px;color:var(--ink)}
+    .wait-chip b{font-weight:800}.wait-chip span{color:var(--muted)}
+    .kart-legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:14px;font-size:11px;color:var(--muted)}
+    .kart-legend i{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--pine);margin-right:5px;vertical-align:middle}
+    .kart-legend .lg-water{border-radius:2px;background:var(--water)}
+    .kart-note{margin-top:12px;font-size:11px;color:var(--muted);line-height:1.5}
+    @media (max-width:720px){.kart-main{grid-template-columns:1fr}.kart-side{position:static}}
+    @media (prefers-reduced-motion:reduce){.gard-dot,.gard-ring{transition:none}}
+  </style>
+
+  <div class="kart-top">
+    <div>
+      <div class="kart-kicker">Slektskart</div>
+      <h1 class="kart-title">Slekta langs Dalsfjorden</h1>
+      <p class="kart-sub">Eit stilisert kart over gardane i Fjaler og Ytre Holmedal der greina høyrer heime. Trykk ein gard for å sjå kven som budde der. Kartet er skjematisk — gardane står plasserte etter faktiske koordinatar, men fjorden er teikna fritt.</p>
+    </div>
+    <a class="kart-back" href="slektstre.html">← Til slektstreet</a>
+  </div>
+
+  <div class="kart-main">
+    <div class="kart-stage" id="kart-stage"></div>
+    <aside class="kart-side" id="kart-side"></aside>
+  </div>
+
+  <div class="kart-wait" id="kart-wait"></div>
+
+  <div class="kart-legend">
+    <span><i></i>Gard med folk frå treet</span>
+    <span><i class="lg-water"></i>Dalsfjorden (skjematisk)</span>
+  </div>
+  <p class="kart-note">Fleire gardar kjem etter kvart som koordinatane deira blir stadfesta — akkurat som opne plassar i treet ventar på ei kjelde.</p>
+
+  <script>
+  (() => {
+    let people={}, gardar=[];
+    let selected=null;
+    const $ = id => document.getElementById(id);
+    const norm = s => (s||"").toLocaleLowerCase("nn");
+
+    function folkPaaGard(g){
+      const keys=(g.match||[g.namn]).map(norm);
+      return Object.values(people).filter(p=>{
+        const pl=norm(p.place);
+        return keys.some(k=>pl.includes(k));
+      }).sort((a,b)=>a.id-b.id);
+    }
+
+    // --- projeksjon: lat/lng -> svg, sørstranda nedanfor fjorden ---
+    function project(){
+      const W=940, H=430, m=66, shoreY=150, bandTop=shoreY+26, bandBot=H-52;
+      const coord = gardar.filter(g=>g.lat&&g.lng);
+      const k = Math.cos(61.34*Math.PI/180);
+      const pts = coord.map(g=>({g, px:g.lng*k, py:g.lat}));
+      const pxs=pts.map(p=>p.px), pys=pts.map(p=>p.py);
+      let minx=Math.min(...pxs), maxx=Math.max(...pxs), miny=Math.min(...pys), maxy=Math.max(...pys);
+      const dx=(maxx-minx)||1e-4, dy=(maxy-miny)||1e-4;
+      pts.forEach(p=>{
+        const nx=(p.px-minx)/dx;              // 0 vest .. 1 aust
+        const ny=(p.py-miny)/dy;              // 0 sør .. 1 nord
+        p.x = m + nx*(W-2*m);
+        p.y = bandBot - ny*(bandBot-bandTop); // nord -> nær fjorden
+      });
+      return {pts, W, H, shoreY};
+    }
+
+    function wavePath(W, y, amp, W2){
+      let d=`M0 0 L${W} 0 L${W} ${y} `;
+      for(let x=W; x>=0; x-=20){ const yy=y+amp*Math.sin(x/58); d+=`L${x.toFixed(1)} ${yy.toFixed(1)} `; }
+      return d+"Z";
+    }
+    function waveLine(W, y, amp){
+      let d=`M0 ${y} `;
+      for(let x=0; x<=W; x+=20){ const yy=y+amp*Math.sin((x+30)/58); d+=`L${x} ${yy.toFixed(1)} `; }
+      return d;
+    }
+
+    function drawMap(){
+      const {pts, W, H, shoreY} = project();
+      const parts=[];
+      parts.push(`<defs><linearGradient id="watergrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="color-mix(in srgb,var(--water) 82%,#2c4a52)"/><stop offset="1" stop-color="var(--water)"/></linearGradient></defs>`);
+      parts.push(`<rect x="0" y="0" width="${W}" height="${H}" fill="var(--panel)"/>`);
+      parts.push(`<path class="fjord-water" d="${wavePath(W, shoreY, 13)}"/>`);
+      parts.push(`<path class="fjord-wave" d="${waveLine(W, shoreY-24, 9)}"/>`);
+      parts.push(`<path class="fjord-wave" d="${waveLine(W, shoreY-46, 7)}" opacity="0.32"/>`);
+      parts.push(`<text class="fjord-name" x="${W/2}" y="${shoreY-64}" text-anchor="middle">DALSFJORDEN</text>`);
+      parts.push(`<text class="compass" x="26" y="30">N ↑</text>`);
+      parts.push(`<text class="compass" x="${W-70}" y="${H-20}">vest ← → aust</text>`);
+
+      pts.forEach(p=>{
+        const g=p.g, n=folkPaaGard(g).length, sel=selected&&selected.namn===g.namn;
+        const lx=(p.x+12).toFixed(1), ly=(p.y+4).toFixed(1);
+        if(g.landmark){
+          parts.push(`<g class="gard-pin landmark" data-gard="${g.namn}">
+            <rect class="mark-land" x="${(p.x-4).toFixed(1)}" y="${(p.y-4).toFixed(1)}" width="8" height="8" rx="1.5"/>
+            <text class="mark-land-label" x="${lx}" y="${ly}">${g.namn}</text></g>`);
+          return;
+        }
+        parts.push(`<g class="gard-pin ${sel?'sel':''}" data-gard="${g.namn}">
+          <circle class="gard-ring" cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="11"/>
+          <circle class="gard-dot" cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="6"/>
+          <text class="gard-label" x="${lx}" y="${ly}">${g.namn}${n?` <tspan class="gard-count">· ${n}</tspan>`:""}</text>
+        </g>`);
+      });
+      $("kart-stage").innerHTML=`<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kart over Dalsfjord-gardane">${parts.join("")}</svg>`;
+    }
+
+    function statusLabel(s){return {documented:"Dokumentert",family:"Familieopplyst",probable:"Sannsynleg",open:"Open"}[s]||s;}
+    function folkCard(p){
+      return `<div class="folk-card ${p.status}"><span class="folk-dot"></span><span class="folk-name">${p.name}</span><span class="folk-life">${p.life||""}</span>${p.work?`<span class="folk-work">${p.work}</span>`:""}</div>`;
+    }
+    function renderSide(){
+      if(!selected){
+        $("kart-side").innerHTML=`<div class="side-eyebrow">Vel ein gard</div><h2 class="side-name">Dalsfjorden</h2><p class="side-merknad">Trykk ein av gardane på kartet for å sjå kven i slekta som høyrde til der.</p>`;
+        return;
+      }
+      const g=selected, folk=folkPaaGard(g);
+      const body = folk.length
+        ? `<div class="side-folk">${folk.map(folkCard).join("")}</div>`
+        : `<div class="side-empty">Ingen personar i treet er førde med bustad her enno.</div>`;
+      $("kart-side").innerHTML=`<div class="side-eyebrow">${g.sokn||"Gard"}${g.landmark?" · landemerke":""}</div><h2 class="side-name">${g.namn}</h2><div class="side-sokn">${folk.length} ${folk.length===1?'person':'personar'} i treet</div>${g.merknad?`<p class="side-merknad">${g.merknad}</p>`:""}${g.landmark?"":body}`;
+    }
+
+    function renderWait(){
+      const wait=gardar.filter(g=>!g.lat||!g.lng);
+      if(!wait.length){ $("kart-wait").style.display="none"; return; }
+      $("kart-wait").innerHTML=`<h3>Gardar som ventar på stadfesta koordinatar</h3><div class="wait-list">${wait.map(g=>{const n=folkPaaGard(g).length;return `<span class="wait-chip"><b>${g.namn}</b> <span>· ${n} ${n===1?'person':'personar'}</span></span>`;}).join("")}</div>`;
+    }
+
+    function selectGard(namn){
+      selected = gardar.find(g=>g.namn===namn) || null;
+      drawMap(); renderSide();
+    }
+    $("kart-stage").addEventListener("click", e=>{
+      const el=e.target.closest("[data-gard]");
+      if(el) selectGard(el.dataset.gard);
+    });
+
+    function boot(){ drawMap(); renderSide(); renderWait(); }
+    fetch("slektstre-data.json")
+      .then(r=>{ if(!r.ok) throw new Error(r.status); return r.json(); })
+      .then(d=>{ people=d.people||{}; gardar=d.gardar||[]; boot(); })
+      .catch(err=>{ $("kart-stage").innerHTML='<p style="padding:2rem;color:#a33">Klarte ikkje laste slektstre-data.json ('+err+'). Sida må opnast frå ein tenar (t.d. GitHub Pages), ikkje rett frå fila.</p>'; });
+  })();
+  </script>
+</div>
