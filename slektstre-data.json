@@ -7,7 +7,7 @@
  "people": {
   "1": {
    "id": 1,
-   "name": "Aleksander Åsnes",
+   "name": "Aleksander Nygaard Åsnes",
    "life": "f. 10.04.1990",
    "status": "family",
    "place": "Førde",
@@ -18,7 +18,7 @@
   "2": {
    "id": 2,
    "name": "Agnar Åsnes",
-   "life": "f. 1952",
+   "life": "f. 26.05.1952",
    "status": "family",
    "place": "Fjaler",
    "work": "",
@@ -28,9 +28,9 @@
   "3": {
    "id": 3,
    "name": "Margaret Nygaard",
-   "life": "f. 1951",
+   "life": "f. 08.01.1951",
    "status": "family",
-   "place": "",
+   "place": "Bergen",
    "work": "",
    "notes": "Mor. Opplysningane er frå familien.",
    "src": []
@@ -4739,6 +4739,11 @@
     "type": "image",
     "src": "bileteslekt/person-1.jpg",
     "cap": "Aleksander med blomekrans. Familiefoto, 1990-åra."
+   },
+   {
+    "type": "image",
+    "src": "bileteslekt/aleksander-nrk.jpg",
+    "cap": "Aleksander på reportasjeoppdrag med NRK-mikrofon."
    }
   ],
   "2": [
