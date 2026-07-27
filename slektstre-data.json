@@ -3614,31 +3614,39 @@
   "145": {
    "id": 145,
    "name": "Søren Hansen Rivedal",
-   "life": "f. 1737",
+   "life": "1737–1816",
    "status": "documented",
    "place": "Rivedal, Ytre Holmedal",
-   "work": "Bonde og gardbuar",
-   "notes": "Far til Mattis Sørensen Rivedal. Folketeljinga 1801 fører Mathias Sørensen, ni år gammal, som barn etter tredje ekteskap i hushaldet til Søren Hansen og Dorthe Nielsdatter på Rivedal.\n\nPatronymet Sørensen og oppkallinga — sonen Mattis kalla sin eigen son Søren i 1815 — stadfestar farsnamnet. Aldersoppgåva peikar mot fødsel kring 1792, medan dåpen til sonen Søren i 1815 ville tilseie ein noko eldre far; avviket er lite og vanleg. Sjølve teljingsinnførsla bør kontrollerast mot skannet før plassen kan reknast som heilt sikker.",
+   "work": "Bonde på Rivedal, Nedgarden II (1771–1809)",
+   "notes": "Far til Mattis Sørensen Rivedal. «Fjaler: gards- og ættesoge» (bind I) fører han som brukar av Rivedal, Nedgarden II, frå 1771 til 1809; han var fødd 1737 og døydde 1816. Dorthe Nielsdatter var hans tredje kone. Folketeljinga 1801 fører Mathias Sørensen, ni år gammal, som barn etter det tredje ekteskapet i hushaldet — det knyter lina.\n\nNedgarden II var løpenummer 45; ein bonde Peder er nemnd der alt i 1598. Gamal skyld var 2 pund, 2 dalar og 18 skilling, ny skyld 3,82 mark. Rivedal høyrde frå gamalt til Stiktens (bispestolen sitt) gods; i 1662 fekk biskop Hans Svane på Sjælland kjøpe heile denne godsmengda. Gardsnamnet er truleg knytt til elva — kalla «Riva» i gamal tid — som skil rivedalsbruka i vest frå Hyllset og Vagstad aust for elva.",
    "src": [
     [
      "Folketeljinga 1801: Mathias Sørensen med foreldra Søren Hansen og Dorthe Nielsdatter på Rivedal",
      "https://www.digitalarkivet.no/census/person/pf01058401000392"
+    ],
+    [
+     "Fjaler: gards- og ættesoge, bind I – Rivedal (Nedgarden II), s. 215",
+     "https://www.nb.no/items/f49f1a3e264aa7ff3cd7df4196f13984?page=215"
     ]
    ],
    "deep": true
   },
   "146": {
    "id": 146,
-   "name": "Dorthe Nielsdatter Rivedal",
-   "life": "f. 1759",
+   "name": "Dorthe Nielsdatter Tysse",
+   "life": "1759–1810",
    "status": "documented",
    "place": "Rivedal, Ytre Holmedal",
    "work": "Gardkone",
-   "notes": "Mor til Mattis Sørensen Rivedal. Folketeljinga 1801 fører Mathias Sørensen som barn i hushaldet hennar og Søren Hansen på Rivedal, ført som barn etter Søren sitt tredje ekteskap.",
+   "notes": "Mor til Mattis Sørensen Rivedal og tredje kona til Søren Hansen på Rivedal. «Fjaler: gards- og ættesoge» (bind I) fører henne som fødd på Tysse i 1759 og død i 1810. Folketeljinga 1801 fører sonen Mathias i hushaldet hennar og Søren på Rivedal.",
    "src": [
     [
      "Folketeljinga 1801: Mathias Sørensen med foreldra Søren Hansen og Dorthe Nielsdatter på Rivedal",
      "https://www.digitalarkivet.no/census/person/pf01058401000392"
+    ],
+    [
+     "Fjaler: gards- og ættesoge, bind I – Rivedal (Nedgarden II), s. 215",
+     "https://www.nb.no/items/f49f1a3e264aa7ff3cd7df4196f13984?page=215"
     ]
    ],
    "deep": true
