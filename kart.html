@@ -12,7 +12,7 @@
     .kart-stage{border:1px solid var(--line);border-radius:17px;overflow:hidden;position:relative}
     #kart-map{height:clamp(380px,60vh,580px);width:100%;background:var(--panel);z-index:0}
     .leaflet-container{font-family:inherit}
-    .gard-tip{background:var(--card);border:1px solid color-mix(in srgb,var(--pine) 40%,var(--line));color:var(--pine);font-family:Georgia,serif;font-size:12.5px;font-weight:700;border-radius:8px;padding:2px 8px;box-shadow:0 2px 8px color-mix(in srgb,var(--ink) 18%,transparent)}
+    .gard-tip{background:var(--card);border:1px solid color-mix(in srgb,var(--pine) 40%,var(--line));color:var(--pine);font-family:Georgia,serif;font-size:12.5px;font-weight:700;border-radius:8px;padding:2px 8px;box-shadow:0 2px 8px color-mix(in srgb,var(--ink) 18%,transparent);cursor:pointer}
     .gard-tip.sel{background:var(--gold);color:var(--ink);border-color:var(--ink)}
     .gard-tip::before{display:none}
     .leaflet-bar a{color:var(--pine)}
@@ -109,16 +109,16 @@
     function initMap(){
       const coord = gardar.filter(g=>g.lat&&g.lng);
       map = L.map('kart-map', {scrollWheelZoom:true, zoomControl:true});
-      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom:18,
-        attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>-bidragsytarar'
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png', {
+        maxZoom:19, subdomains:'abcd',
+        attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>-bidragsytarar &copy; <a href="https://carto.com/attributions">CARTO</a>'
       }).addTo(map);
       coord.forEach(g=>{
         const mk = L.circleMarker([g.lat, g.lng], {
           radius: g.landmark?6:8, color:CARD, weight:2,
           fillColor: g.landmark?"#557259":PINE, fillOpacity:1
         }).addTo(map);
-        mk.bindTooltip(g.namn, {permanent:true, direction:'right', className:'gard-tip', offset:[9,0]});
+        mk.bindTooltip(g.namn, {permanent:true, direction:'right', className:'gard-tip', offset:[9,0], interactive:true});
         mk.on('click', ()=>selectGard(g.namn));
         markers[g.namn]=mk;
       });
