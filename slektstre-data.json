@@ -4903,6 +4903,26 @@
     "Langenes"
    ],
    "merknad": "Mellomstasjon for Tomas- og Hans Magnus-huslyden. Ventar på koordinatar."
+  },
+  {
+   "namn": "Hyllset",
+   "sokn": "Fjaler",
+   "match": [
+    "Hyllset"
+   ],
+   "merknad": "Antzée- og Fürstenberg-greina (prestefolk frå Vestfold og Telemark).",
+   "lat": 61.36760625466978,
+   "lng": 5.264892365489846
+  },
+  {
+   "namn": "Liset",
+   "sokn": "Ytre Holmedal",
+   "match": [
+    "Liset"
+   ],
+   "merknad": "Johanne Catharine, Johanne Margrethe og Wilhelmine Sophie.",
+   "lat": 61.361971067300594,
+   "lng": 5.25579431297231
   }
  ]
 }
