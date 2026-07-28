@@ -4804,6 +4804,25 @@
     "cap": "Perdy Aleksandra. Familiefoto, udatert. Varsamt restaurert: riper og flekkskade dempa; ingen fargar eller detaljar er lagde til."
    }
   ],
+  "8": [
+   {
+    "type": "image",
+    "src": "bileteslekt/hans-kristina-aasnes.jpg",
+    "cap": "Hans Magnus Åsnes og Kristina (f. Hus, 1886–1957) med born. Indre Åsnes."
+   }
+  ],
+  "9": [
+   {
+    "type": "image",
+    "src": "bileteslekt/hans-kristina-aasnes.jpg",
+    "cap": "Hans Magnus Åsnes og Kristina (f. Hus, 1886–1957) med born. Indre Åsnes."
+   },
+   {
+    "type": "image",
+    "src": "bileteslekt/hus-husmannsplass.jpg",
+    "cap": "Husmannsplassen Hus i Jølster. Slåttonn ved vatnet."
+   }
+  ],
   "12": [
    {
     "type": "image",
@@ -4817,6 +4836,76 @@
     "src": "bileteslekt/person-14.jpg",
     "cap": "Frå familiealbumet, merkt «Anton». Udatert. Varsamt restaurert: støv fjerna og tonebreidda retta opp; ingen fargar eller detaljar er lagde til."
    }
+  ],
+  "18": [
+   {
+    "type": "image",
+    "src": "bileteslekt/hus-husmannsplass.jpg",
+    "cap": "Husmannsplassen Hus i Jølster. Slåttonn ved vatnet."
+   }
+  ],
+  "19": [
+   {
+    "type": "image",
+    "src": "bileteslekt/hus-husmannsplass.jpg",
+    "cap": "Husmannsplassen Hus i Jølster. Slåttonn ved vatnet."
+   }
+  ],
+  "38": [
+   {
+    "type": "image",
+    "src": "bileteslekt/hus-husmannsplass.jpg",
+    "cap": "Husmannsplassen Hus i Jølster. Slåttonn ved vatnet."
+   }
+  ],
+  "39": [
+   {
+    "type": "image",
+    "src": "bileteslekt/hus-husmannsplass.jpg",
+    "cap": "Husmannsplassen Hus i Jølster. Slåttonn ved vatnet."
+   }
+  ],
+  "121": [
+   {
+    "type": "image",
+    "src": "bileteslekt/hus-husmannsplass.jpg",
+    "cap": "Husmannsplassen Hus i Jølster. Slåttonn ved vatnet."
+   }
+  ],
+  "122": [
+   {
+    "type": "image",
+    "src": "bileteslekt/hus-husmannsplass.jpg",
+    "cap": "Husmannsplassen Hus i Jølster. Slåttonn ved vatnet."
+   }
+  ],
+  "135": [
+   {
+    "type": "image",
+    "src": "bileteslekt/hus-husmannsplass.jpg",
+    "cap": "Husmannsplassen Hus i Jølster. Slåttonn ved vatnet."
+   }
+  ],
+  "136": [
+   {
+    "type": "image",
+    "src": "bileteslekt/hus-husmannsplass.jpg",
+    "cap": "Husmannsplassen Hus i Jølster. Slåttonn ved vatnet."
+   }
+  ],
+  "137": [
+   {
+    "type": "image",
+    "src": "bileteslekt/hus-husmannsplass.jpg",
+    "cap": "Husmannsplassen Hus i Jølster. Slåttonn ved vatnet."
+   }
+  ],
+  "138": [
+   {
+    "type": "image",
+    "src": "bileteslekt/hus-husmannsplass.jpg",
+    "cap": "Husmannsplassen Hus i Jølster. Slåttonn ved vatnet."
+   }
   ]
  },
  "gardar": [
@@ -4828,7 +4917,7 @@
    "match": [
     "Rivedal"
    ],
-   "merknad": "Nedgarden II, løpenr. 45. Søren Hansen, Dorthe, Mattis og Hans si slekt."
+   "merknad": "Nedgarden II, løpenr. 45. Søren Hansen var brukar her frå 1771 til 1809 og vart eigar i 1802. Sonesonen Hans Mathiassen dreiv garden som sjølveigar; folketeljinga 1875 viser ekteparet med tre born, tenestejente, tenestekar og kårkona Kari Danielsdatter."
   },
   {
    "namn": "Fagervik",
@@ -4838,7 +4927,7 @@
    "match": [
     "Fagervik"
    ],
-   "merknad": "Husmannsplass. Jens Iversen og Larine Klemetsdotter."
+   "merknad": "Husmannsplass. Jens Iversen var husmann her frå kring 1811 (seinare på Steien), og sonen Klemet vart fødd her i 1819."
   },
   {
    "namn": "Tysse",
@@ -4848,7 +4937,7 @@
    "match": [
     "Tysse"
    ],
-   "merknad": "Dorthe Nielsdatter var fødd her i 1759. Landmark-slekta høyrde til Tysse."
+   "merknad": "Dorthe Nielsdatter vart fødd her i 1759. Landmark-slekta høyrde til Tysse."
   },
   {
    "namn": "Hauge",
@@ -4858,7 +4947,7 @@
    "match": [
     "Hauge"
    ],
-   "merknad": "Klemet Andersson, far til Larine."
+   "merknad": "Klemet Andersson, far til Larine Klemetsdotter som gifta seg med Jens Iversen i 1811."
   },
   {
    "namn": "Indre Åsnes",
@@ -4868,18 +4957,33 @@
    "match": [
     "Åsnes"
    ],
-   "merknad": "Åsnes-lina; bruket «Unde gar’en». Arne, Hans Magnus, Tomas og Marte.",
-   "foto": {
-    "src": "bileteslekt/gard-indre-aasnes.jpg",
-    "cap": "Indre Åsnes ved Dalsfjorden ein frostmorgon. Bruket «Unde gar’en» ligg i det frosne kulturlandskapet ned mot fjorden."
-   }
+   "merknad": "Bruket «Unde gar’en», 35/4. Tomas Vilhelm var sjølveigande gardbrukar her frå 1910. Sonesonen Arne Toralf dreiv garden til 1980 — dyrking og grøfting, og reiste driftsbygning, våningshus og siloar av eigen skog. Nesalandet fekk vegsamband fyrst i 1968; halve gardbrukarlivet gjekk transporten over Dalsfjorden.",
+   "fotos": [
+    {
+     "src": "bileteslekt/gard-indre-aasnes.jpg",
+     "cap": "Indre Åsnes ein frostmorgon. Bruket «Unde gar’en» ned mot Dalsfjorden."
+    },
+    {
+     "src": "bileteslekt/aasnes-gard-1.jpg",
+     "cap": "Folk samla framfor våningshuset på Indre Åsnes."
+    },
+    {
+     "src": "bileteslekt/aasnes-gard-2.jpg",
+     "cap": "Fleire generasjonar på Indre Åsnes ved fjorden — mellom dei Tomas og Marte sitjande, Hans og Kristina ståande."
+    }
+   ],
+   "folk": [
+    2,
+    9,
+    17
+   ]
   },
   {
    "namn": "Biergene",
    "sokn": "Ytre Holmedal",
    "lat": 61.36362551894837,
    "lng": 5.38963854104277,
-   "merknad": "Johan (Jan) Fasmer Fürstenberg og Judithe Henriksdatter Forman. I Dale, ved fjordbotnen.",
+   "merknad": "Prestegarden Biergene i Dale. Jan Fasmer Fürstenberg var klokkar og budde hos foreldra på prestegarden her i 1801.",
    "match": [
     "Biergene",
     "Bjerga",
@@ -4892,7 +4996,7 @@
    "match": [
     "Brattelie"
    ],
-   "merknad": "Iver Clemetsen og Anne Johannesdatter. Ventar på stadfesta koordinatar."
+   "merknad": "Iver Clemetsen frå Ulvedal var brukar av Brattelid frå 1771 til 1802 og vart eigar i 1802. Fyrste kona Anne Johannesdatter døydde i 1787."
   },
   {
    "namn": "Andalsvik",
@@ -4902,7 +5006,7 @@
    ],
    "lat": 61.33072,
    "lng": 5.219207,
-   "merknad": "Klemet Jensen sitt leigebruk, løpenr. 67, frå seinast 1865. Tomas voks opp her."
+   "merknad": "Klemet Jensen sitt leigebruk, løpenr. 67. I 1865 hadde hushaldet 1 hest, 8 kyr, 15 sauer, 7 geiter og 1 gris. Tomas Vilhelm voks opp her."
   },
   {
    "namn": "Langenes",
@@ -4910,7 +5014,7 @@
    "match": [
     "Langenes"
    ],
-   "merknad": "Mellomstasjon for Tomas- og Hans Magnus-huslyden. Ventar på koordinatar."
+   "merknad": "Tomas Vilhelm var sjølveigande gardbrukar på Langenes 29/1 kring 1900 — korn, potet og husdyr — før huslyden flytta til Indre Åsnes."
   },
   {
    "namn": "Hyllset",
@@ -4918,7 +5022,7 @@
    "match": [
     "Hyllset"
    ],
-   "merknad": "Antzée- og Fürstenberg-greina (prestefolk frå Vestfold og Telemark).",
+   "merknad": "Antzée- og Fürstenberg-greina, offisers- og prestefolk. Kaptein Erik Theodor Antzée (1734–1786) kom frå Botne i Vestfold; dottera Bartholine Eufemia (f. 1782) er ført i Fjaler prestegjeld.",
    "lat": 61.3680075,
    "lng": 5.2654144
   },
@@ -4928,7 +5032,7 @@
    "match": [
     "Liset"
    ],
-   "merknad": "Johanne Catharine, Johanne Margrethe og Wilhelmine Sophie.",
+   "merknad": "Johanne Catharine Fürstenberg vart fødd her kring 1822, dotter av klokkaren Jan Fasmer Fürstenberg. Også Wilhelmine Sophie og Johanne Margrethe høyrde til Liset.",
    "lat": 61.361971067300594,
    "lng": 5.25579431297231
   },
@@ -4940,7 +5044,7 @@
    "match": [
     "Vagstad"
    ],
-   "merknad": "Daniel Joensen og Guri Jonsdatter."
+   "merknad": "Daniel Joensen og Guri Jonsdatter. Folketeljinga 1801 fører dottera Kari, 16 år, i hushaldet."
   },
   {
    "namn": "Mørk",
