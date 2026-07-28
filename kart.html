@@ -114,6 +114,14 @@
 
     function initMap(){
       const coord = gardar.filter(g=>g.lat&&g.lng);
+      // declutter: gardar nær kvarandre får ulik etikett-retning
+      const DIRS=['right','top','left','bottom'];
+      const distM=(a,b)=>Math.hypot((a.lat-b.lat)*111000,(a.lng-b.lng)*111000*Math.cos(a.lat*Math.PI/180));
+      coord.forEach((g,i)=>{
+        let idx=0;
+        for(let j=0;j<i;j++){ if(distM(g,coord[j])<400){ idx=((coord[j]._di||0)+1)%4; } }
+        g._di=idx; g._dir=DIRS[idx];
+      });
       map = L.map('kart-map', {scrollWheelZoom:true, zoomControl:true, attributionControl:false});
       L.control.attribution({prefix:false}).addTo(map);
       L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png', {
@@ -125,7 +133,7 @@
           radius: g.landmark?6:8, color:CARD, weight:2,
           fillColor: g.landmark?"#557259":PINE, fillOpacity:1
         }).addTo(map);
-        mk.bindTooltip(g.namn, {permanent:true, direction:'right', className:'gard-tip', offset:[9,0], interactive:true});
+        mk.bindTooltip(g.namn, {permanent:true, direction:g._dir||'right', className:'gard-tip', offset: (g._dir==='left'?[-9,0]:g._dir==='right'?[9,0]:[0,0]), interactive:true});
         mk.on('click', ()=>selectGard(g.namn));
         markers[g.namn]=mk;
       });
