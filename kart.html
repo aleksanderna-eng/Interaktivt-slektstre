@@ -80,7 +80,10 @@
 
     function folkPaaGard(g){
       const keys=(g.match||[g.namn]).map(norm);
-      return Object.values(people).filter(p=>keys.some(k=>norm(p.place).includes(k))).sort((a,b)=>a.id-b.id);
+      const set=new Map();
+      Object.values(people).forEach(p=>{ if(keys.some(k=>norm(p.place).includes(k))) set.set(p.id,p); });
+      (g.folk||[]).forEach(id=>{ if(people[id]) set.set(Number(id),people[id]); });
+      return [...set.values()].sort((a,b)=>a.id-b.id);
     }
     function folkCard(p){
       return `<div class="folk-card ${p.status}"><span class="folk-dot"></span><span class="folk-name">${p.name}</span><span class="folk-life">${p.life||""}</span>${p.work?`<span class="folk-work">${p.work}</span>`:""}</div>`;
@@ -94,7 +97,9 @@
       const body = folk.length
         ? `<div class="side-folk">${folk.map(folkCard).join("")}</div>`
         : `<div class="side-empty">Ingen personar i treet er førde med bustad her enno.</div>`;
-      $("kart-side").innerHTML=`<div class="side-eyebrow">${g.sokn||"Gard"}${g.landmark?" · landemerke":""}</div><h2 class="side-name">${g.namn}</h2><div class="side-sokn">${folk.length} ${folk.length===1?'person':'personar'} i treet</div>${g.foto?`<figure class="gard-foto"><img src="${g.foto.src}" alt="${g.namn}" loading="lazy"><figcaption>${g.foto.cap}</figcaption></figure>`:""}${g.merknad?`<p class="side-merknad">${g.merknad}</p>`:""}${g.landmark?"":body}`;
+      const fotos = g.fotos || (g.foto?[g.foto]:[]);
+      const fotoHtml = fotos.map(f=>`<figure class="gard-foto"><img src="${f.src}" alt="${g.namn}" loading="lazy"><figcaption>${f.cap}</figcaption></figure>`).join("");
+      $("kart-side").innerHTML=`<div class="side-eyebrow">${g.sokn||"Gard"}${g.landmark?" · landemerke":""}</div><h2 class="side-name">${g.namn}</h2><div class="side-sokn">${folk.length} ${folk.length===1?'person':'personar'} i treet</div>${fotoHtml}${g.merknad?`<p class="side-merknad">${g.merknad}</p>`:""}${g.landmark?"":body}`;
     }
     function renderWait(){
       const wait=gardar.filter(g=>!g.lat||!g.lng);
