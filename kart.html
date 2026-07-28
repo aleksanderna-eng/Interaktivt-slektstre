@@ -1,21 +1,21 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
 <div class="kart-app" id="kart-app">
   <style>
-    .kart-app{--ink:var(--color-text-primary,#17211b);--muted:var(--color-text-secondary,#657069);--panel:var(--color-background-secondary,#f4f0e7);--card:var(--color-background-primary,#fffdf8);--line:var(--color-border-secondary,#d7d2c8);--pine:#204d3b;--moss:#557259;--gold:#c58a38;--rose:#9a5d55;--violet:#725987;--open:#8a8d8b;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;max-width:100%;background:linear-gradient(145deg,color-mix(in srgb,var(--panel) 82%,var(--card)),var(--card));border:1px solid var(--line);border-radius:22px;box-shadow:0 18px 45px color-mix(in srgb,var(--ink) 10%,transparent);padding:20px}
+    .kart-app{--ink:var(--color-text-primary,#17211b);--muted:var(--color-text-secondary,#657069);--panel:var(--color-background-secondary,#f4f0e7);--card:var(--color-background-primary,#fffdf8);--line:var(--color-border-secondary,#d7d2c8);--pine:#204d3b;--moss:#557259;--gold:#c58a38;--rose:#9a5d55;--violet:#725987;--open:#8a8d8b;--accent:#39413c;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;max-width:100%;background:linear-gradient(145deg,color-mix(in srgb,var(--panel) 82%,var(--card)),var(--card));border:1px solid var(--line);border-radius:22px;box-shadow:0 18px 45px color-mix(in srgb,var(--ink) 10%,transparent);padding:20px}
     .kart-top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-wrap:wrap}
     .kart-kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--moss);font-weight:800}
     .kart-title{font-family:Georgia,"Times New Roman",serif;font-size:clamp(24px,3.8vw,38px);line-height:1;margin:7px 0 8px;font-weight:700;letter-spacing:-.03em}
     .kart-sub{color:var(--muted);line-height:1.55;max-width:640px;margin:0;font-size:13.5px}
-    .kart-back{flex:none;border:1px solid color-mix(in srgb,var(--pine) 45%,var(--line));background:var(--card);color:var(--pine);border-radius:999px;padding:9px 14px;font-size:12px;font-weight:800;text-decoration:none;white-space:nowrap}
-    .kart-back:hover{background:var(--pine);color:#fff}
+    .kart-back{flex:none;border:1px solid color-mix(in srgb,var(--accent) 40%,var(--line));background:var(--card);color:var(--accent);border-radius:999px;padding:9px 14px;font-size:12px;font-weight:800;text-decoration:none;white-space:nowrap}
+    .kart-back:hover{background:var(--accent);color:#fff}
     .kart-main{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(240px,.62fr);gap:15px;align-items:start;margin-top:16px}
     .kart-stage{border:1px solid var(--line);border-radius:17px;overflow:hidden;position:relative}
     #kart-map{height:clamp(380px,60vh,580px);width:100%;background:var(--panel);z-index:0}
     .leaflet-container{font-family:inherit}
-    .gard-tip{background:var(--card);border:1px solid color-mix(in srgb,var(--pine) 40%,var(--line));color:var(--pine);font-family:Georgia,serif;font-size:12.5px;font-weight:700;border-radius:8px;padding:2px 8px;box-shadow:0 2px 8px color-mix(in srgb,var(--ink) 18%,transparent);cursor:pointer}
+    .gard-tip{background:var(--card);border:1px solid color-mix(in srgb,var(--accent) 38%,var(--line));color:var(--accent);font-family:Georgia,serif;font-size:12.5px;font-weight:700;border-radius:8px;padding:2px 8px;box-shadow:0 2px 8px color-mix(in srgb,var(--ink) 18%,transparent);cursor:pointer}
     .gard-tip.sel{background:var(--gold);color:var(--ink);border-color:var(--ink)}
     .gard-tip::before{display:none}
-    .leaflet-bar a{color:var(--pine)}
+    .leaflet-bar a{color:var(--accent)}
     .leaflet-control-attribution{font-size:9px !important;background:color-mix(in srgb,var(--card) 78%,transparent) !important;color:color-mix(in srgb,var(--muted) 80%,transparent) !important;padding:0 4px !important;border-radius:5px 0 0 0}
     .leaflet-control-attribution a{color:color-mix(in srgb,var(--muted) 85%,transparent) !important;text-decoration:none}
     .leaflet-control-attribution:hover{background:var(--card) !important;color:var(--muted) !important}
@@ -28,7 +28,20 @@
     .gard-foto figcaption{padding:8px 10px;font-size:11px;line-height:1.45;color:var(--muted);border-top:1px solid var(--line);font-style:italic}
     .side-merknad{font-size:12.5px;line-height:1.5;color:var(--muted);margin:0 0 13px;font-style:italic}
     .side-folk{display:grid;gap:7px}
-    .folk-card{position:relative;text-align:left;border:1px solid var(--line);border-left-width:3px;border-radius:11px;background:var(--card);padding:9px 11px;width:100%}
+    .folk-card{position:relative;text-align:left;border:1px solid var(--line);border-left-width:3px;border-radius:11px;background:var(--card);padding:9px 11px;width:100%;display:block;text-decoration:none;color:inherit;cursor:pointer;transition:border-color .12s,transform .12s}
+    .folk-card:hover{border-color:color-mix(in srgb,var(--accent) 45%,var(--line));transform:translateX(2px)}
+    .folk-go{display:block;font-size:10px;color:var(--accent);font-weight:800;margin-top:4px;letter-spacing:.03em}
+    .gard-gal{margin:0 0 13px}
+    .gard-stage{position:relative;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--panel)}
+    .gard-stage img{display:block;width:100%;height:auto;max-height:300px;object-fit:cover}
+    .gard-arrow{position:absolute;top:50%;transform:translateY(-50%);width:29px;height:29px;border-radius:50%;border:1px solid color-mix(in srgb,var(--accent) 38%,var(--line));background:color-mix(in srgb,var(--card) 88%,transparent);color:var(--accent);font-family:Georgia,serif;font-size:17px;line-height:1;cursor:pointer;display:grid;place-items:center}
+    .gard-arrow:hover{background:var(--accent);color:#fff}
+    .gp{left:8px}.gn{right:8px}
+    .gard-dots{display:flex;justify-content:center;gap:6px;padding:8px 0 0}
+    .gard-dot{width:6px;height:6px;border-radius:50%;border:none;padding:0;cursor:pointer;background:color-mix(in srgb,var(--open) 45%,var(--card))}
+    .gard-dot.on{background:var(--gold);transform:scale(1.25)}
+    .gard-cap{display:flex;justify-content:space-between;gap:9px;padding:7px 2px 0;font-size:11px;line-height:1.45;color:var(--muted);font-style:italic}
+    .gard-count{flex:none;font-style:normal;font-weight:800;font-size:10px;color:var(--moss)}
     .folk-card.documented{border-left-color:var(--pine)}.folk-card.family{border-left-color:var(--violet)}.folk-card.probable{border-left-color:var(--gold)}.folk-card.open{border-left-color:color-mix(in srgb,var(--open) 55%,var(--line))}
     .folk-name{display:block;font-family:Georgia,serif;font-weight:700;font-size:13.5px;line-height:1.15}
     .folk-life{display:block;color:var(--muted);font-size:11px;margin-top:3px}
@@ -86,7 +99,18 @@
       return [...set.values()].sort((a,b)=>a.id-b.id);
     }
     function folkCard(p){
-      return `<div class="folk-card ${p.status}"><span class="folk-dot"></span><span class="folk-name">${p.name}</span><span class="folk-life">${p.life||""}</span>${p.work?`<span class="folk-work">${p.work}</span>`:""}</div>`;
+      return `<a class="folk-card ${p.status}" href="index.html?person=${p.id}"><span class="folk-dot"></span><span class="folk-name">${p.name}</span><span class="folk-life">${p.life||""}</span>${p.work?`<span class="folk-work">${p.work}</span>`:""}<span class="folk-go">Opne i slektstreet →</span></a>`;
+    }
+    let gardIndex=0;
+    function gardGalleri(g){
+      const fotos = g.fotos || (g.foto?[g.foto]:[]);
+      if(!fotos.length) return "";
+      const i=Math.max(0,Math.min(gardIndex,fotos.length-1));
+      const f=fotos[i], many=fotos.length>1;
+      const nav = many?`<button class="gard-arrow gp" data-gnav="prev" aria-label="Førre">‹</button><button class="gard-arrow gn" data-gnav="next" aria-label="Neste">›</button>`:"";
+      const dots = many?`<div class="gard-dots">${fotos.map((_,k)=>`<button class="gard-dot${k===i?" on":""}" data-ggo="${k}" aria-label="Bilete ${k+1}"></button>`).join("")}</div>`:"";
+      const teljar = many?`<span class="gard-count">${i+1} / ${fotos.length}</span>`:"";
+      return `<figure class="gard-gal"><div class="gard-stage"><img src="${f.src}" alt="${g.namn}" loading="lazy">${nav}</div>${dots}<figcaption class="gard-cap"><span>${f.cap||""}</span>${teljar}</figcaption></figure>`;
     }
     function renderSide(){
       if(!selected){
@@ -97,8 +121,7 @@
       const body = folk.length
         ? `<div class="side-folk">${folk.map(folkCard).join("")}</div>`
         : `<div class="side-empty">Ingen personar i treet er førde med bustad her enno.</div>`;
-      const fotos = g.fotos || (g.foto?[g.foto]:[]);
-      const fotoHtml = fotos.map(f=>`<figure class="gard-foto"><img src="${f.src}" alt="${g.namn}" loading="lazy"><figcaption>${f.cap}</figcaption></figure>`).join("");
+      const fotoHtml = gardGalleri(g);
       $("kart-side").innerHTML=`<div class="side-eyebrow">${g.sokn||"Gard"}${g.landmark?" · landemerke":""}</div><h2 class="side-name">${g.namn}</h2><div class="side-sokn">${folk.length} ${folk.length===1?'person':'personar'} i treet</div>${fotoHtml}${g.merknad?`<p class="side-merknad">${g.merknad}</p>`:""}${g.landmark?"":body}`;
     }
     function renderWait(){
@@ -108,6 +131,7 @@
     }
     function selectGard(namn){
       selected = gardar.find(g=>g.namn===namn) || null;
+      gardIndex=0;
       for(const [nm,mk] of Object.entries(markers)){
         const sel = nm===namn;
         mk.setStyle({fillColor: sel?GOLD:PINE});
@@ -150,7 +174,21 @@
       }
     }
 
-    function boot(){ initMap(); renderSide(); renderWait(); }
+    document.addEventListener("click",e=>{
+      const nav=e.target.closest("[data-gnav]");
+      if(nav && selected){
+        const fotos=selected.fotos||(selected.foto?[selected.foto]:[]);
+        if(fotos.length>1){ gardIndex = nav.dataset.gnav==="next" ? (gardIndex+1)%fotos.length : (gardIndex-1+fotos.length)%fotos.length; renderSide(); }
+        return;
+      }
+      const go=e.target.closest("[data-ggo]");
+      if(go){ gardIndex=Number(go.dataset.ggo); renderSide(); }
+    });
+    function boot(){
+      initMap(); renderWait();
+      const q=new URLSearchParams(location.search).get("gard");
+      if(q && gardar.some(g=>g.namn===q)) selectGard(q); else renderSide();
+    }
     fetch("slektstre-data.json")
       .then(r=>{ if(!r.ok) throw new Error(r.status); return r.json(); })
       .then(d=>{ people=d.people||{}; gardar=d.gardar||[]; boot(); })
