@@ -23,6 +23,9 @@
     .side-eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:800}
     .side-name{font-family:Georgia,serif;font-size:22px;line-height:1.05;margin:5px 0 3px}
     .side-sokn{font-size:12px;color:var(--moss);font-weight:800;margin-bottom:9px}
+    .gard-foto{margin:0 0 13px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--panel)}
+    .gard-foto img{display:block;width:100%;height:auto}
+    .gard-foto figcaption{padding:8px 10px;font-size:11px;line-height:1.45;color:var(--muted);border-top:1px solid var(--line);font-style:italic}
     .side-merknad{font-size:12.5px;line-height:1.5;color:var(--muted);margin:0 0 13px;font-style:italic}
     .side-folk{display:grid;gap:7px}
     .folk-card{position:relative;text-align:left;border:1px solid var(--line);border-left-width:3px;border-radius:11px;background:var(--card);padding:9px 11px;width:100%}
@@ -91,7 +94,7 @@
       const body = folk.length
         ? `<div class="side-folk">${folk.map(folkCard).join("")}</div>`
         : `<div class="side-empty">Ingen personar i treet er førde med bustad her enno.</div>`;
-      $("kart-side").innerHTML=`<div class="side-eyebrow">${g.sokn||"Gard"}${g.landmark?" · landemerke":""}</div><h2 class="side-name">${g.namn}</h2><div class="side-sokn">${folk.length} ${folk.length===1?'person':'personar'} i treet</div>${g.merknad?`<p class="side-merknad">${g.merknad}</p>`:""}${g.landmark?"":body}`;
+      $("kart-side").innerHTML=`<div class="side-eyebrow">${g.sokn||"Gard"}${g.landmark?" · landemerke":""}</div><h2 class="side-name">${g.namn}</h2><div class="side-sokn">${folk.length} ${folk.length===1?'person':'personar'} i treet</div>${g.foto?`<figure class="gard-foto"><img src="${g.foto.src}" alt="${g.namn}" loading="lazy"><figcaption>${g.foto.cap}</figcaption></figure>`:""}${g.merknad?`<p class="side-merknad">${g.merknad}</p>`:""}${g.landmark?"":body}`;
     }
     function renderWait(){
       const wait=gardar.filter(g=>!g.lat||!g.lng);
