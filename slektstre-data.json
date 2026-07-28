@@ -4868,15 +4868,23 @@
    "match": [
     "Åsnes"
    ],
-   "merknad": "Åsnes-lina; bruket «Unde gar’en». Arne, Hans Magnus, Tomas og Marte."
+   "merknad": "Åsnes-lina; bruket «Unde gar’en». Arne, Hans Magnus, Tomas og Marte.",
+   "foto": {
+    "src": "bileteslekt/gard-indre-aasnes.jpg",
+    "cap": "Indre Åsnes ved Dalsfjorden ein frostmorgon. Bruket «Unde gar’en» ligg i det frosne kulturlandskapet ned mot fjorden."
+   }
   },
   {
-   "namn": "Dale",
-   "sokn": "Fjaler",
-   "lat": 61.3588,
-   "lng": 5.3973,
-   "landmark": true,
-   "merknad": "Kyrkje- og administrasjonsstaden i Fjaler."
+   "namn": "Biergene",
+   "sokn": "Ytre Holmedal",
+   "lat": 61.36362551894837,
+   "lng": 5.38963854104277,
+   "merknad": "Johan (Jan) Fasmer Fürstenberg og Judithe Henriksdatter Forman. I Dale, ved fjordbotnen.",
+   "match": [
+    "Biergene",
+    "Bjerga",
+    "Bierga"
+   ]
   },
   {
    "namn": "Brattelie",
@@ -4911,8 +4919,8 @@
     "Hyllset"
    ],
    "merknad": "Antzée- og Fürstenberg-greina (prestefolk frå Vestfold og Telemark).",
-   "lat": 61.36760625466978,
-   "lng": 5.264892365489846
+   "lat": 61.3680075,
+   "lng": 5.2654144
   },
   {
    "namn": "Liset",
@@ -4923,6 +4931,27 @@
    "merknad": "Johanne Catharine, Johanne Margrethe og Wilhelmine Sophie.",
    "lat": 61.361971067300594,
    "lng": 5.25579431297231
+  },
+  {
+   "namn": "Vagstad",
+   "sokn": "Ytre Holmedal",
+   "lat": 61.374722,
+   "lng": 5.262778,
+   "match": [
+    "Vagstad"
+   ],
+   "merknad": "Daniel Joensen og Guri Jonsdatter."
+  },
+  {
+   "namn": "Mørk",
+   "sokn": "Ytre Holmedal",
+   "lat": 61.363579,
+   "lng": 5.143689,
+   "match": [
+    "Mørk",
+    "Mork"
+   ],
+   "merknad": "Peder Christiansen Mørk."
   }
  ]
 }
