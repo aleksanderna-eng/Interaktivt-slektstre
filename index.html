@@ -1,13 +1,13 @@
 <div class="slekt-app" id="slekt-app">
   <style>
-    .slekt-app{--ink:var(--color-text-primary,#17211b);--muted:var(--color-text-secondary,#657069);--panel:var(--color-background-secondary,#f4f0e7);--card:var(--color-background-primary,#fffdf8);--line:var(--color-border-secondary,#d7d2c8);--pine:#204d3b;--moss:#557259;--gold:#c58a38;--rose:#9a5d55;--violet:#725987;--open:#8a8d8b;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;max-width:100%;overflow-x:clip;overflow-y:visible;background:linear-gradient(145deg,color-mix(in srgb,var(--panel) 82%,var(--card)),var(--card));border:1px solid var(--line);border-radius:22px;box-shadow:0 18px 45px color-mix(in srgb,var(--ink) 10%,transparent)}
+    .slekt-app{--ink:var(--color-text-primary,#17211b);--muted:var(--color-text-secondary,#657069);--panel:var(--color-background-secondary,#f4f0e7);--card:var(--color-background-primary,#fffdf8);--line:var(--color-border-secondary,#d7d2c8);--pine:#204d3b;--moss:#557259;--gold:#c58a38;--rose:#9a5d55;--violet:#725987;--open:#8a8d8b;--accent:#39413c;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;max-width:100%;overflow-x:clip;overflow-y:visible;background:linear-gradient(145deg,color-mix(in srgb,var(--panel) 82%,var(--card)),var(--card));border:1px solid var(--line);border-radius:22px;box-shadow:0 18px 45px color-mix(in srgb,var(--ink) 10%,transparent)}
     .slekt-app *{box-sizing:border-box}.slekt-shell{padding:24px}.slekt-hero{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:start;padding:6px 2px 20px;border-bottom:1px solid var(--line)}
     .slekt-kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--moss);font-weight:800}.slekt-title{font-family:Georgia,"Times New Roman",serif;font-size:clamp(26px,4.2vw,42px);line-height:.98;margin:7px 0 10px;font-weight:700;letter-spacing:-.035em}.slekt-sub{color:var(--muted);line-height:1.55;max-width:650px;margin:0;font-size:14px}.slekt-mark{width:90px;height:90px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,color-mix(in srgb,var(--gold) 46%,var(--card)),color-mix(in srgb,var(--pine) 88%,black));color:white;font-family:Georgia,serif;font-size:29px;border:4px solid color-mix(in srgb,var(--gold) 60%,var(--card));box-shadow:0 8px 22px color-mix(in srgb,var(--ink) 16%,transparent)}
-    .slekt-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:18px 0}.slekt-stat{background:color-mix(in srgb,var(--card) 90%,var(--panel));border:1px solid var(--line);border-radius:14px;padding:12px}.slekt-stat strong{display:block;font-family:Georgia,serif;font-size:25px;color:var(--pine)}.slekt-stat span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.status-bar{display:flex;height:6px;border-radius:999px;overflow:hidden;margin:-8px 0 4px;border:1px solid var(--line)}.status-bar i{display:block;height:100%}.status-bar .sb-doc{background:var(--pine)}.status-bar .sb-fam{background:var(--violet)}.status-bar .sb-prob{background:var(--gold)}.status-bar .sb-open{background:color-mix(in srgb,var(--open) 38%,var(--card))}
+    .slekt-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:18px 0}.slekt-stat{background:color-mix(in srgb,var(--card) 90%,var(--panel));border:1px solid var(--line);border-radius:14px;padding:12px}.slekt-stat strong{display:block;font-family:Georgia,serif;font-size:25px;color:var(--accent)}.slekt-stat span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.status-bar{display:flex;height:6px;border-radius:999px;overflow:hidden;margin:-8px 0 4px;border:1px solid var(--line)}.status-bar i{display:block;height:100%}.status-bar .sb-doc{background:var(--pine)}.status-bar .sb-fam{background:var(--violet)}.status-bar .sb-prob{background:var(--gold)}.status-bar .sb-open{background:color-mix(in srgb,var(--open) 38%,var(--card))}
     .fan-wrap{margin:14px 0 2px;border:1px solid var(--line);border-radius:15px;background:color-mix(in srgb,var(--card) 94%,var(--panel));overflow:hidden}.fan-wrap summary{cursor:pointer;padding:11px 14px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);list-style:none;display:flex;align-items:center;gap:8px}.fan-wrap summary::before{content:"";width:0;height:0;border-left:5px solid var(--moss);border-top:4px solid transparent;border-bottom:4px solid transparent;transition:transform .15s}.fan-wrap[open] summary::before{transform:rotate(90deg)}.fan-wrap summary::-webkit-details-marker{display:none}.fan-holder{padding:2px 10px 0}.fan-holder svg{display:block;width:100%;height:auto;max-height:330px;margin:0 auto}.fan-caption{margin:6px 14px 12px;font-size:11px;color:var(--muted);line-height:1.4}
     .fan-seg{stroke:var(--card);stroke-width:1.4;cursor:pointer;transition:filter .12s}.fan-seg:hover{filter:brightness(1.12)}.fan-seg.documented{fill:var(--pine)}.fan-seg.family{fill:var(--violet)}.fan-seg.probable{fill:var(--gold)}.fan-seg.open{fill:color-mix(in srgb,var(--open) 26%,var(--card))}.fan-seg.fan-future{cursor:default}.fan-seg.fan-future:hover{filter:none}.fan-seg.selected{stroke:var(--ink);stroke-width:2.2}.fan-center-label{font-family:Georgia,serif;font-size:15px;font-weight:700;fill:white;text-anchor:middle;pointer-events:none}
     .to-fan{position:fixed;right:18px;bottom:18px;z-index:40;border:1px solid color-mix(in srgb,var(--pine) 55%,var(--line));background:var(--pine);color:white;border-radius:999px;padding:10px 15px;font-size:12px;font-weight:800;letter-spacing:.03em;cursor:pointer;box-shadow:0 8px 22px color-mix(in srgb,var(--ink) 25%,transparent);opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .18s,transform .18s}.to-fan.show{opacity:1;transform:none;pointer-events:auto}.to-fan:hover{background:color-mix(in srgb,var(--pine) 85%,white)}
-    .slekt-toolbar{display:grid;grid-template-columns:minmax(0,1fr) minmax(210px,.55fr);gap:12px;align-items:end;margin:18px 0}.slekt-label{display:block;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}.slekt-chips{display:flex;flex-wrap:wrap;gap:7px}.slekt-chip,.slekt-search{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;min-height:38px}.slekt-chip{padding:8px 12px;font-weight:700;font-size:12px;cursor:pointer}.slekt-chip:hover{border-color:var(--moss)}.slekt-chip.active{background:var(--pine);color:white;border-color:var(--pine)}.slekt-chip.chip-deep{border-color:color-mix(in srgb,var(--gold) 55%,var(--line));box-shadow:inset 3px 0 0 var(--gold)}.slekt-chip.chip-deep.active{background:color-mix(in srgb,var(--gold) 78%,var(--ink));border-color:color-mix(in srgb,var(--gold) 78%,var(--ink))}.slekt-search{width:100%;padding:9px 13px;border-radius:12px;outline:none}.slekt-search:focus{border-color:var(--moss);box-shadow:0 0 0 3px color-mix(in srgb,var(--moss) 18%,transparent)}
+    .slekt-toolbar{display:grid;grid-template-columns:minmax(0,1fr) minmax(210px,.55fr);gap:12px;align-items:end;margin:18px 0}.slekt-label{display:block;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}.slekt-chips{display:flex;flex-wrap:wrap;gap:7px}.slekt-chip,.slekt-search{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;min-height:38px}.slekt-chip{padding:8px 12px;font-weight:700;font-size:12px;cursor:pointer}.slekt-chip:hover{border-color:var(--moss)}.slekt-chip.active{background:var(--accent);color:white;border-color:var(--accent)}.slekt-chip.chip-deep{border-color:color-mix(in srgb,var(--gold) 55%,var(--line));box-shadow:inset 3px 0 0 var(--gold)}.slekt-chip.chip-deep.active{background:color-mix(in srgb,var(--gold) 78%,var(--ink));border-color:color-mix(in srgb,var(--gold) 78%,var(--ink))}.slekt-search{width:100%;padding:9px 13px;border-radius:12px;outline:none}.slekt-search:focus{border-color:var(--moss);box-shadow:0 0 0 3px color-mix(in srgb,var(--moss) 18%,transparent)}
     .slekt-main{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(250px,.68fr);gap:15px;align-items:start}.slekt-tree,.slekt-detail{background:color-mix(in srgb,var(--card) 94%,var(--panel));border:1px solid var(--line);border-radius:17px}.slekt-tree{padding:16px}.slekt-view-title{display:flex;justify-content:space-between;gap:10px;align-items:baseline;margin-bottom:12px}.slekt-view-title h2{font-family:Georgia,serif;font-size:21px;margin:0}.slekt-view-title span{font-size:11px;color:var(--muted)}
     .gen-band{position:relative;padding:12px 0 13px}.gen-band+.gen-band{border-top:1px dashed var(--line)}.gen-head{display:flex;align-items:center;gap:8px;margin-bottom:9px}.gen-num{width:25px;height:25px;border-radius:50%;display:grid;place-items:center;background:color-mix(in srgb,var(--pine) 12%,var(--card));color:var(--pine);font-weight:900;font-size:11px}.gen-name{font-weight:800;font-size:12px}.gen-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));gap:8px}.deep-band .gen-head{align-items:flex-start}.deep-band .gen-num{background:color-mix(in srgb,var(--gold) 18%,var(--card));color:color-mix(in srgb,var(--gold) 72%,var(--ink))}.person-card{position:relative;text-align:left;border:1px solid var(--line);border-radius:13px;background:var(--card);padding:11px 11px 10px;cursor:pointer;min-height:78px;color:var(--ink);box-shadow:0 3px 10px color-mix(in srgb,var(--ink) 5%,transparent)}.person-card:hover,.person-card.selected{transform:translateY(-1px);border-color:var(--moss);box-shadow:0 7px 18px color-mix(in srgb,var(--ink) 10%,transparent)}.person-card.selected{outline:2px solid color-mix(in srgb,var(--moss) 28%,transparent)}.person-card.open{background:repeating-linear-gradient(135deg,var(--card),var(--card) 8px,color-mix(in srgb,var(--open) 7%,var(--card)) 8px,color-mix(in srgb,var(--open) 7%,var(--card)) 16px);opacity:.62}.person-card.open .person-name{font-style:italic;font-weight:400}.person-card.open:hover,.person-card.open.selected{opacity:1}.person-name{display:block;font-family:Georgia,serif;font-weight:700;font-size:14px;line-height:1.15;padding-right:12px}.person-life{display:block;color:var(--muted);font-size:11px;margin-top:6px}.person-place{display:block;color:var(--moss);font-size:10px;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.status-dot{position:absolute;right:9px;top:10px;width:8px;height:8px;border-radius:50%}.documented .status-dot{background:var(--pine)}.family .status-dot{background:var(--violet)}.probable .status-dot{background:var(--gold)}.open .status-dot{background:var(--open)}.person-card.documented{border-left:3px solid var(--pine)}.person-card.family{border-left:3px solid var(--violet)}.person-card.probable{border-left:3px solid var(--gold)}.person-card.open{border-left:3px solid color-mix(in srgb,var(--open) 55%,var(--line))}
     .slekt-detail{padding:17px;position:sticky;top:10px}.detail-eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:800}.detail-name{font-family:Georgia,serif;font-size:24px;line-height:1.08;margin:5px 0 4px}.detail-life{font-size:13px;color:var(--moss);font-weight:800;margin-bottom:13px}.detail-status{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:5px 9px;font-size:10px;font-weight:800;margin-bottom:14px}.detail-status i{width:8px;height:8px;border-radius:50%;background:var(--open)}.detail-list{display:grid;gap:11px;margin:0}.detail-row dt{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;font-weight:800}.detail-row dd{margin:2px 0 0;font-size:13px;line-height:1.45}.note-p{margin:0}.note-p+.note-p{margin-top:8px}.detail-media{margin:0 0 14px;border:1px solid var(--line);border-radius:11px;overflow:hidden;background:var(--panel)}.media-stage{position:relative;display:grid;background:color-mix(in srgb,var(--ink) 5%,var(--panel))}.media-el{display:block;width:100%;height:auto;grid-area:1/1;max-height:420px;object-fit:contain}.media-arrow{position:absolute;top:50%;transform:translateY(-50%);width:33px;height:33px;border-radius:50%;border:1px solid color-mix(in srgb,var(--pine) 38%,var(--line));background:color-mix(in srgb,var(--card) 86%,transparent);color:var(--pine);font-family:Georgia,serif;font-size:20px;line-height:1;cursor:pointer;display:grid;place-items:center;-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);box-shadow:0 2px 9px color-mix(in srgb,var(--ink) 20%,transparent);transition:background .12s,color .12s}.media-arrow:hover{background:var(--pine);color:#fff}.media-prev{left:9px}.media-next{right:9px}.media-dots{display:flex;flex-wrap:wrap;justify-content:center;gap:7px;padding:9px 10px;border-top:1px solid var(--line)}.media-dot{width:7px;height:7px;border-radius:50%;border:none;padding:0;cursor:pointer;background:color-mix(in srgb,var(--open) 45%,var(--card));transition:transform .12s,background .12s}.media-dot:hover{background:var(--moss)}.media-dot.on{background:var(--gold);transform:scale(1.25)}.media-dot.film{border-radius:2px}.media-cap{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:8px 10px;font-size:11px;line-height:1.4;color:var(--muted);border-top:1px solid var(--line);font-style:italic}.media-count{flex:none;font-style:normal;font-weight:800;letter-spacing:.04em;color:var(--moss);font-size:10px}@media (prefers-reduced-motion:reduce){.media-arrow,.media-dot{transition:none}}
@@ -17,26 +17,32 @@
     .search-results{display:none;margin:0 0 14px;padding:12px;border:1px solid var(--line);border-radius:14px;background:var(--card)}.search-results.show{display:block}.search-results h3{font-size:12px;margin:0 0 8px}.search-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:6px}.search-hit{border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:8px;font-size:12px;text-align:left;color:var(--ink);cursor:pointer}
     @media(max-width:700px){.slekt-shell{padding:16px}.slekt-hero{grid-template-columns:1fr}.slekt-mark{display:none}.slekt-stats{grid-template-columns:repeat(2,1fr)}.slekt-toolbar,.slekt-main{grid-template-columns:1fr}.slekt-detail{position:static}.gen-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.person-name{font-size:13px}}
     @media(max-width:380px){.slekt-shell{padding:12px}.slekt-title{font-size:27px}.gen-grid{grid-template-columns:1fr}.slekt-chip{padding:7px 9px}.slekt-stats{gap:6px}.slekt-stat{padding:9px}}
+.slekt-footer{margin-top:20px;padding-top:13px;border-top:1px solid var(--line);font-size:10.5px;letter-spacing:.05em;color:color-mix(in srgb,var(--muted) 78%,transparent);text-align:right}
+.note-h{font-family:Georgia,serif;font-size:12.5px;font-weight:700;color:var(--accent);margin:14px 0 4px;letter-spacing:.01em}
+.note-h:first-child{margin-top:0}
+.note-lead{font-size:13px;color:var(--ink)}
+.uncertain{color:var(--muted);font-style:italic}
+.gard-link{display:inline-flex;align-items:center;gap:6px;margin-top:4px;border:1px solid color-mix(in srgb,var(--accent) 35%,var(--line));background:var(--card);color:var(--accent);border-radius:999px;padding:5px 11px;font-size:11.5px;font-weight:700;text-decoration:none}
+.gard-link:hover{background:var(--accent);color:#fff}
   </style>
 
   <div class="slekt-shell">
     <header class="slekt-hero">
       <div>
-        <div class="slekt-kicker">Åtte ledd i oversynsvifta · versjon 32 · 27. juli 2026 · 29 fylte plassar i den ytste ringen</div>
+        <div class="slekt-kicker">Åtte ledd i oversynsvifta</div>
         <h1 class="slekt-title">Slektstreet til Aleksander Nygaard Åsnes</h1>
         <p class="slekt-sub">Eit kjeldekritisk slektstre frå Fjaler, Kinn, Askøy, Bergen, Tromsø og Sunnmøre. Oversynsvifta viser åtte ledd; dei sju første har personkort, medan åttande ring viser kva som er fylt inn og kva som står ope for vidare gransking.</p>
-        <a href="kart.html" style="display:inline-block;margin-top:11px;border:1px solid color-mix(in srgb,var(--pine) 45%,var(--line));background:var(--card);color:var(--pine);border-radius:999px;padding:9px 14px;font-size:12px;font-weight:800;text-decoration:none">Sjå slekta på kartet over Dalsfjorden →</a>
+        <a href="kart.html" style="display:inline-block;margin-top:11px;border:1px solid color-mix(in srgb,var(--accent) 40%,var(--line));background:var(--card);color:var(--accent);border-radius:999px;padding:9px 14px;font-size:12px;font-weight:800;text-decoration:none">Sjå slekta på kartet over Dalsfjorden →</a>
       </div>
-      <div class="slekt-mark" aria-hidden="true">ÅN</div>
     </header>
 
     <section class="slekt-stats" aria-label="Status for slektstreet">
-      <div class="slekt-stat"><strong id="stat-named">0</strong><span>av 63 plassar fylte</span></div>
+      <div class="slekt-stat"><strong id="stat-named">0</strong><span>personar i treet</span></div>
       <div class="slekt-stat"><strong id="stat-doc">0</strong><span>kjeldedokumenterte</span></div>
-      <div class="slekt-stat"><strong id="stat-open">0</strong><span>opne identitetar</span></div>
-      <div class="slekt-stat"><strong id="stat-deep">0</strong><span>anar bakom 6. ledd</span></div>
+      <div class="slekt-stat"><strong id="stat-open">0</strong><span>opne plassar i 7. ledd</span></div>
+      <div class="slekt-stat"><strong id="stat-deep">0</strong><span>anar i 7. og 8. ledd</span></div>
     </section>
-    <div class="status-bar" id="status-bar" role="img" aria-label="Fordeling av kjeldestatus for dei 63 plassane"></div>
+    <div class="status-bar" id="status-bar" role="img" aria-label="Fordeling av kjeldestatus for alle personane i treet"></div>
 
     <details class="fan-wrap" open>
       <summary>Oversynsvifte · 255 plassar gjennom åtte ledd</summary>
@@ -71,6 +77,7 @@
           <span class="legend-item"><i class="legend-open"></i>Ukjend / open</span>
         </div>
         <p class="slekt-note">Dei seks detaljerte ledda er: deg, foreldre, besteforeldre, oldeforeldre, tippoldeforeldre og tipptippoldeforeldre. Oversynsvifta har i tillegg ein sjuande og ein åttande ring, som blir fylt inn etter kvart som anane blir dokumenterte. Namneformer er normaliserte i overskriftene; historisk skrivemåte står i detaljane.</p>
+    <footer class="slekt-footer">Versjon 32 · sist oppdatert 27. juli 2026 · 29 fylte plassar i åttande ring</footer>
       </section>
 
       <aside class="slekt-detail" id="detail-panel" aria-label="Persondetaljar"></aside>
@@ -80,7 +87,7 @@
 
   <script>
   (() => {
-    let people={}, deepLinks={}, generation7={}, deepGroups=[], deepAside={}, media={};
+    let people={}, deepLinks={}, generation7={}, deepGroups=[], deepAside={}, media={}, gardar=[];
     let mediaIndex=0;
 
 
@@ -212,6 +219,31 @@
       return `${role} · ${gen===1?"":side+" · "}nr. ${id}`;
     }
     function statusLabel(status){return {documented:"Dokumentert i primærkjelde",family:"Opplyst av familien",probable:"Sannsynleg / sekundærspor",open:"Ukjend / open"}[status]}
+    function fmtLife(s){
+      if(!s) return "";
+      return String(s).replace(/(ca\.|truleg|omkring|kring|før |etter |levde|midt i|\?)/gi, m=>`<span class="uncertain">${m}</span>`);
+    }
+    function notesHtml(notes){
+      if(!notes) return "";
+      return notes.split("\n\n").map((blokk,i)=>{
+        if(blokk.startsWith("## ")){
+          const nl=blokk.indexOf("\n");
+          const tittel=blokk.slice(3, nl===-1?undefined:nl);
+          const rest=nl===-1?"":blokk.slice(nl+1);
+          return `<h4 class="note-h">${tittel}</h4>${rest?`<p class="note-p">${rest}</p>`:""}`;
+        }
+        return `<p class="note-p${i===0?" note-lead":""}">${blokk}</p>`;
+      }).join("");
+    }
+    function gardForPerson(id){
+      const p=people[id]; if(!p) return null;
+      const norm=s=>(s||"").toLocaleLowerCase("nn");
+      return gardar.find(g=>{
+        if(!g.lat||!g.lng) return false;
+        if((g.folk||[]).map(Number).includes(Number(id))) return true;
+        return (g.match||[g.namn]).some(m=>norm(p.place).includes(norm(m)));
+      })||null;
+    }
     function galleryHtml(id){
       const items = media[id];
       if(!items || !items.length) return "";
@@ -239,7 +271,7 @@
       const relItems=[...(child?[relChip(child,"Barn")]:[]),...parents.map((id,i)=>relChip(id,i===0?"Far":"Mor"))];
       const relHtml=relItems.length?`<div class="detail-row"><dt>Gå til</dt><dd><div class="rel-list">${relItems.join("")}</div></dd></div>`:"";
       const src=p.src.length?`<div class="source-list">${p.src.map(([label,url])=>`<a class="source-link" href="${url}" target="_blank" rel="noopener">${label} ↗</a>`).join("")}</div>`:"Ingen direkte nettkjelde knytt til denne plassen.";
-      $("detail-panel").innerHTML=`<div class="detail-eyebrow">${personEyebrow(selectedId)}</div><h2 class="detail-name">${p.name}</h2><div class="detail-life">${p.life}</div><div class="detail-status ${p.status}"><i style="background:${p.status==='documented'?'var(--pine)':p.status==='family'?'var(--violet)':p.status==='probable'?'var(--gold)':'var(--open)'}"></i>${statusLabel(p.status)}</div>${galleryHtml(selectedId)}<dl class="detail-list"><div class="detail-row"><dt>Stad</dt><dd>${p.place||"Ikkje oppgjeve"}</dd></div>${p.work?`<div class="detail-row"><dt>Yrke / rolle</dt><dd>${p.work}</dd></div>`:""}<div class="detail-row"><dt>Merknad</dt><dd>${p.notes.split("\n\n").map(a=>`<p class="note-p">${a}</p>`).join("")}</dd></div><div class="detail-row"><dt>Kjelder</dt><dd>${src}</dd></div>${relHtml}</dl>`;
+      $("detail-panel").innerHTML=`<div class="detail-eyebrow">${personEyebrow(selectedId)}</div><h2 class="detail-name">${p.name}</h2><div class="detail-life">${fmtLife(p.life)}</div><div class="detail-status ${p.status}"><i style="background:${p.status==='documented'?'var(--pine)':p.status==='family'?'var(--violet)':p.status==='probable'?'var(--gold)':'var(--open)'}"></i>${statusLabel(p.status)}</div>${galleryHtml(selectedId)}<dl class="detail-list"><div class="detail-row"><dt>Stad</dt><dd>${p.place||"Ikkje oppgjeve"}${(()=>{const g=gardForPerson(selectedId);return g?`<br><a class="gard-link" href="kart.html?gard=${encodeURIComponent(g.namn)}">${g.namn} på kartet →</a>`:"";})()}</dd></div>${p.work?`<div class="detail-row"><dt>Yrke / rolle</dt><dd>${p.work}</dd></div>`:""}<div class="detail-row"><dt>Merknad</dt><dd>${notesHtml(p.notes)}</dd></div><div class="detail-row"><dt>Kjelder</dt><dd>${src}</dd></div>${relHtml}</dl>`;
     }
     function branchFor(id){
       if(people[id].deep) return "deep";
@@ -301,14 +333,15 @@
       document.querySelectorAll(".fan-seg").forEach(el=>el.classList.toggle("selected",Number(el.dataset.person)===selectedId));
     }
     function renderStats(){
-      const core=Object.values(people).filter(p=>!p.deep);
-      const deep=Object.values(people).filter(p=>p.deep);
-      $("stat-named").textContent=core.filter(p=>p.status!=="open").length;
-      $("stat-doc").textContent=core.filter(p=>p.status==="documented").length;
-      $("stat-open").textContent=core.filter(p=>p.status==="open").length;
+      const all=Object.values(people);
+      const deep=all.filter(p=>p.deep);
+      $("stat-named").textContent=all.length;
+      $("stat-doc").textContent=all.filter(p=>p.status==="documented").length;
+      let open7=0; for(let s=64;s<=127;s++){ if(!generation7[s]||!people[generation7[s]]) open7++; }
+      $("stat-open").textContent=open7;
       $("stat-deep").textContent=deep.length;
-      const n=s=>core.filter(p=>p.status===s).length;
-      const total=core.length||1;
+      const n=s=>all.filter(p=>p.status===s).length;
+      const total=all.length||1;
       $("status-bar").innerHTML=[["sb-doc",n("documented"),"dokumentert"],["sb-fam",n("family"),"familieopplyst"],["sb-prob",n("probable"),"sannsynleg"],["sb-open",n("open"),"open"]]
         .filter(([,c])=>c>0)
         .map(([cls,c,lab])=>`<i class="${cls}" style="width:${(c/total*100).toFixed(1)}%" title="${c} ${lab}"></i>`).join("");
@@ -386,10 +419,16 @@
         : (mediaIndex-1+items.length)%items.length;
       renderDetail();
     });
-    function boot(){ computeDerived(); renderStats();renderFan();renderChips();renderTree();renderDetail(); }
+    function boot(){
+      computeDerived();
+      const q=new URLSearchParams(location.search).get("person");
+      if(q && people[q]){ selectedId=Number(q); currentBranch=branchFor(selectedId); }
+      renderStats();renderFan();renderChips();renderTree();renderDetail();
+      if(q && people[q]) setTimeout(()=>{ const el=document.getElementById("detail-panel"); if(el&&el.scrollIntoView) el.scrollIntoView({behavior:"smooth",block:"center"}); },120);
+    }
     fetch("slektstre-data.json")
       .then(r=>{ if(!r.ok) throw new Error(r.status); return r.json(); })
-      .then(d=>{ people=d.people; deepLinks=d.deepLinks; generation7=d.generation7; deepGroups=d.deepGroups; deepAside=d.deepAside; media=d.media||{}; boot(); })
+      .then(d=>{ people=d.people; deepLinks=d.deepLinks; generation7=d.generation7; deepGroups=d.deepGroups; deepAside=d.deepAside; media=d.media||{}; gardar=d.gardar||[]; boot(); })
       .catch(err=>{ const el=document.getElementById("fan-holder")||document.body; el.innerHTML='<p style="padding:2rem;color:#a33">Klarte ikkje laste slektstre-data.json ('+err+'). Sida må opnast frå ein tenar (t.d. GitHub Pages), ikkje rett frå fila.</p>'; });
   })();
   </script>
