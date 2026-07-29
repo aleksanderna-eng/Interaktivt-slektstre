@@ -5,7 +5,10 @@
     .slekt-kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--moss);font-weight:800}.slekt-title{font-family:Georgia,"Times New Roman",serif;font-size:clamp(26px,4.2vw,42px);line-height:.98;margin:7px 0 10px;font-weight:700;letter-spacing:-.035em}.slekt-sub{color:var(--muted);line-height:1.55;max-width:650px;margin:0;font-size:14px}.slekt-mark{width:90px;height:90px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,color-mix(in srgb,var(--gold) 46%,var(--card)),color-mix(in srgb,var(--pine) 88%,black));color:white;font-family:Georgia,serif;font-size:29px;border:4px solid color-mix(in srgb,var(--gold) 60%,var(--card));box-shadow:0 8px 22px color-mix(in srgb,var(--ink) 16%,transparent)}
     .slekt-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:18px 0}.slekt-stat{background:color-mix(in srgb,var(--card) 90%,var(--panel));border:1px solid var(--line);border-radius:14px;padding:12px}.slekt-stat strong{display:block;font-family:Georgia,serif;font-size:25px;color:var(--accent)}.slekt-stat span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.status-bar{display:flex;height:6px;border-radius:999px;overflow:hidden;margin:-8px 0 4px;border:1px solid var(--line)}.status-bar i{display:block;height:100%}.status-bar .sb-doc{background:var(--pine)}.status-bar .sb-fam{background:var(--violet)}.status-bar .sb-prob{background:var(--gold)}.status-bar .sb-open{background:color-mix(in srgb,var(--open) 38%,var(--card))}
     .fan-wrap{margin:14px 0 2px;border:1px solid var(--line);border-radius:15px;background:color-mix(in srgb,var(--card) 94%,var(--panel));overflow:hidden}.fan-wrap summary{cursor:pointer;padding:11px 14px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);list-style:none;display:flex;align-items:center;gap:8px}.fan-wrap summary::before{content:"";width:0;height:0;border-left:5px solid var(--moss);border-top:4px solid transparent;border-bottom:4px solid transparent;transition:transform .15s}.fan-wrap[open] summary::before{transform:rotate(90deg)}.fan-wrap summary::-webkit-details-marker{display:none}.fan-holder{padding:2px 10px 0}.fan-holder svg{display:block;width:100%;height:auto;max-height:330px;margin:0 auto}.fan-caption{margin:6px 14px 12px;font-size:11px;color:var(--muted);line-height:1.4}
-    .fan-seg{stroke:var(--card);stroke-width:1.4;cursor:pointer;transition:filter .12s}.fan-seg:hover{filter:brightness(1.12)}.fan-seg.documented{fill:var(--pine)}.fan-seg.family{fill:var(--violet)}.fan-seg.probable{fill:var(--gold)}.fan-seg.open{fill:color-mix(in srgb,var(--open) 26%,var(--card))}.fan-seg.fan-future{cursor:default}.fan-seg.fan-future:hover{filter:none}.fan-seg.selected{stroke:var(--ink);stroke-width:2.2}.fan-center-label{font-family:Georgia,serif;font-size:15px;font-weight:700;fill:white;text-anchor:middle;pointer-events:none}
+    .fan-seg{stroke:var(--card);stroke-width:1.4;cursor:pointer;transition:filter .18s ease,fill .28s ease,stroke-width .18s ease}.fan-seg:hover{filter:brightness(1.1)}.fan-seg.documented{fill:var(--pine)}.fan-seg.family{fill:var(--violet)}.fan-seg.probable{fill:var(--gold)}.fan-seg.open{fill:color-mix(in srgb,var(--open) 26%,var(--card))}.fan-seg.fan-future{cursor:default}.fan-seg.fan-future:hover{filter:none}.fan-seg.selected{stroke:var(--ink);stroke-width:2.6;filter:brightness(1.2) drop-shadow(0 2px 5px color-mix(in srgb,var(--ink) 38%,transparent))}.kinship-line{fill:none;stroke:var(--accent);stroke-width:2.6;stroke-linecap:round;opacity:.92;pointer-events:none;filter:drop-shadow(0 1px 2px color-mix(in srgb,var(--ink) 30%,transparent))}.fan-center-label{font-family:Georgia,serif;font-size:15px;font-weight:700;fill:white;text-anchor:middle;pointer-events:none}
+    @keyframes detail-in{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+    #detail-panel.detail-anim{animation:detail-in .24s ease}
+    @media (prefers-reduced-motion:reduce){.fan-seg{transition:none}#detail-panel.detail-anim{animation:none}.kinship-line{transition:none!important}}
     .to-fan{position:fixed;right:18px;bottom:18px;z-index:40;border:1px solid color-mix(in srgb,var(--pine) 55%,var(--line));background:var(--pine);color:white;border-radius:999px;padding:10px 15px;font-size:12px;font-weight:800;letter-spacing:.03em;cursor:pointer;box-shadow:0 8px 22px color-mix(in srgb,var(--ink) 25%,transparent);opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .18s,transform .18s}.to-fan.show{opacity:1;transform:none;pointer-events:auto}.to-fan:hover{background:color-mix(in srgb,var(--pine) 85%,white)}
     .slekt-toolbar{display:grid;grid-template-columns:minmax(0,1fr) minmax(210px,.55fr);gap:12px;align-items:end;margin:18px 0}.slekt-label{display:block;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}.slekt-chips{display:flex;flex-wrap:wrap;gap:7px}.slekt-chip,.slekt-search{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;min-height:38px}.slekt-chip{padding:8px 12px;font-weight:700;font-size:12px;cursor:pointer}.slekt-chip:hover{border-color:var(--moss)}.slekt-chip.active{background:var(--accent);color:white;border-color:var(--accent)}.slekt-chip.chip-deep{border-color:color-mix(in srgb,var(--gold) 55%,var(--line));box-shadow:inset 3px 0 0 var(--gold)}.slekt-chip.chip-deep.active{background:color-mix(in srgb,var(--gold) 78%,var(--ink));border-color:color-mix(in srgb,var(--gold) 78%,var(--ink))}.slekt-search{width:100%;padding:9px 13px;border-radius:12px;outline:none}.slekt-search:focus{border-color:var(--moss);box-shadow:0 0 0 3px color-mix(in srgb,var(--moss) 18%,transparent)}
     .slekt-main{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(250px,.68fr);gap:15px;align-items:start}.slekt-tree,.slekt-detail{background:color-mix(in srgb,var(--card) 94%,var(--panel));border:1px solid var(--line);border-radius:17px}.slekt-tree{padding:16px}.slekt-view-title{display:flex;justify-content:space-between;gap:10px;align-items:baseline;margin-bottom:12px}.slekt-view-title h2{font-family:Georgia,serif;font-size:21px;margin:0}.slekt-view-title span{font-size:11px;color:var(--muted)}
@@ -47,7 +50,7 @@
     <details class="fan-wrap" open>
       <summary>Oversynsvifte · 255 plassar gjennom åtte ledd</summary>
       <div class="fan-holder" id="fan-holder"></div>
-      <p class="fan-caption">Farssida til venstre, morssida til høgre. Sjuande ring: <strong>48 grøne segment</strong>, 13 gule og 3 heilt opne plassar. Dei 47 grøne segmenta svarar til 43 ulike dokumenterte personar, sidan nokre anar står to gonger ved ahnenverlust. Åttande ring har <strong>39 fylte plassar</strong> av 128, 33 grøne og 6 gule. Fjorten av dei kom frå folketeljinga 1801: foreldrepara på Hus og Veiteberg i Jølster, på Vagstad og Rivedal i Ytre Holmedal, på Stranden i Askøy og på Volle i Ulstein. Iver Clemetsen på Brattelie er stadfesta grøn gjennom Fjaler-bygdeboka. Dei sju gule er Anne Johannesdatter på Brattelie, Klemet Andersson Hauge på Hauge, Agothe Eliasdatter på Hus, foreldreparet Ole Simonsen og Nille Amundsdatter på Volle, og Simon Torgeirson og Anne Eriksdatter på Hegrenes.</p>
+      <p class="fan-caption">Farssida til venstre, morssida til høgre. Sjuande ring: <strong>48 grøne segment</strong>, 13 gule og 3 heilt opne plassar. Dei 47 grøne segmenta svarar til 43 ulike dokumenterte personar, sidan nokre anar står to gonger ved ahnenverlust. Åttande ring har <strong>47 fylte plassar</strong> av 128, 33 grøne og 14 gule. Fjorten av dei kom frå folketeljinga 1801: foreldrepara på Hus og Veiteberg i Jølster, på Vagstad og Rivedal i Ytre Holmedal, på Stranden i Askøy og på Volle i Ulstein. Iver Clemetsen på Brattelie er stadfesta grøn gjennom Fjaler-bygdeboka. Dei sju gule er Anne Johannesdatter på Brattelie, Klemet Andersson Hauge på Hauge, Agothe Eliasdatter på Hus, foreldreparet Ole Simonsen og Nille Amundsdatter på Volle, og Simon Torgeirson og Anne Eriksdatter på Hegrenes.</p>
     </details>
 
     <section class="slekt-toolbar">
@@ -77,7 +80,7 @@
           <span class="legend-item"><i class="legend-open"></i>Ukjend / open</span>
         </div>
         <p class="slekt-note">Dei seks detaljerte ledda er: deg, foreldre, besteforeldre, oldeforeldre, tippoldeforeldre og tipptippoldeforeldre. Oversynsvifta har i tillegg ein sjuande og ein åttande ring, som blir fylt inn etter kvart som anane blir dokumenterte. Namneformer er normaliserte i overskriftene; historisk skrivemåte står i detaljane.</p>
-    <footer class="slekt-footer">Versjon 34 · sist oppdatert 28. juli 2026 · 39 fylte plassar i åttande ring</footer>
+    <footer class="slekt-footer">Versjon 38 · sist oppdatert 28. juli 2026 · 47 fylte plassar i åttande ring</footer>
       </section>
 
       <aside class="slekt-detail" id="detail-panel" aria-label="Persondetaljar"></aside>
@@ -119,6 +122,14 @@
     ];
     const genNames=["Deg","Foreldre","Besteforeldre","Oldeforeldre","Tippoldeforeldre","Tipptippoldeforeldre","Tipptipptippoldeforeldre"];
     let currentBranch="all", selectedId=1;
+    const FAN={cx:420, cy:420, r0:42, ring:53};
+    function centroidFromAh(ah){
+      if(ah<=1) return [FAN.cx, FAN.cy+FAN.r0*0.35];
+      const g=Math.floor(Math.log2(ah)), i=ah-2**g;
+      const span=Math.PI/(2**g), a=Math.PI+i*span+span/2;
+      const r=FAN.r0+(g-0.5)*FAN.ring;
+      return [FAN.cx+r*Math.cos(a), FAN.cy+r*Math.sin(a)];
+    }
     const $ = id => document.getElementById(id);
 
     function idsForBranch(root){
@@ -272,6 +283,7 @@
       const relHtml=relItems.length?`<div class="detail-row"><dt>Gå til</dt><dd><div class="rel-list">${relItems.join("")}</div></dd></div>`:"";
       const src=p.src.length?`<div class="source-list">${p.src.map(([label,url])=>`<a class="source-link" href="${url}" target="_blank" rel="noopener">${label} ↗</a>`).join("")}</div>`:"Ingen direkte nettkjelde knytt til denne plassen.";
       $("detail-panel").innerHTML=`<div class="detail-eyebrow">${personEyebrow(selectedId)}</div><h2 class="detail-name">${p.name}</h2><div class="detail-life">${fmtLife(p.life)}</div><div class="detail-status ${p.status}"><i style="background:${p.status==='documented'?'var(--pine)':p.status==='family'?'var(--violet)':p.status==='probable'?'var(--gold)':'var(--open)'}"></i>${statusLabel(p.status)}</div>${galleryHtml(selectedId)}<dl class="detail-list"><div class="detail-row"><dt>Stad</dt><dd>${p.place||"Ikkje oppgjeve"}${(()=>{const g=gardForPerson(selectedId);return g?`<br><a class="gard-link" href="kart.html?gard=${encodeURIComponent(g.namn)}">${g.namn} på kartet →</a>`:"";})()}</dd></div>${p.work?`<div class="detail-row"><dt>Yrke / rolle</dt><dd>${p.work}</dd></div>`:""}<div class="detail-row"><dt>Merknad</dt><dd>${notesHtml(p.notes)}</dd></div><div class="detail-row"><dt>Kjelder</dt><dd>${src}</dd></div>${relHtml}</dl>`;
+      const dp=$("detail-panel"); dp.classList.remove("detail-anim"); void dp.offsetWidth; dp.classList.add("detail-anim");
     }
     function branchFor(id){
       if(people[id].deep) return "deep";
@@ -304,7 +316,7 @@
       let parts=[];
       // Sentrum: halvskive for startpersonen
       const [sx1,sy1]=pt(r0,Math.PI),[sx2,sy2]=pt(r0,2*Math.PI);
-      parts.push(`<path class="fan-seg ${people[1].status}" data-person="1" d="M${sx1.toFixed(1)} ${sy1.toFixed(1)} A${r0} ${r0} 0 0 1 ${sx2.toFixed(1)} ${sy2.toFixed(1)} Z"><title>${people[1].name} · ${people[1].life}</title></path>`);
+      parts.push(`<path class="fan-seg ${people[1].status}" data-person="1" data-ah="1" d="M${sx1.toFixed(1)} ${sy1.toFixed(1)} A${r0} ${r0} 0 0 1 ${sx2.toFixed(1)} ${sy2.toFixed(1)} Z"><title>${people[1].name} · ${people[1].life}</title></path>`);
       parts.push(`<text class="fan-center-label" x="${cx}" y="${cy-13}">Deg</text>`);
       for(let g=1;g<=7;g++){
         const count=2**g, span=Math.PI/count, r1=r0+(g-1)*ring, r2=r0+g*ring;
@@ -315,22 +327,42 @@
             const label=g===6?"sjuande ledd":"åttande ledd";
             const slot=count+i, personId=gen[slot], p=personId?people[personId]:null;
             if(p){
-              parts.push(`<path class="fan-seg ${p.status}" data-person="${personId}" d="${seg(r1,r2,a1,a2)}"><title>${p.name} · ${label}, nr. ${slot}</title></path>`);
+              parts.push(`<path class="fan-seg ${p.status}" data-person="${personId}" data-ah="${slot}" d="${seg(r1,r2,a1,a2)}"><title>${p.name} · ${label}, nr. ${slot}</title></path>`);
             }else{
-              parts.push(`<path class="fan-seg open fan-future" d="${seg(r1,r2,a1,a2)}"><title>Open plass i ${label} · nr. ${slot}</title></path>`);
+              parts.push(`<path class="fan-seg open fan-future" data-ah="${slot}" d="${seg(r1,r2,a1,a2)}"><title>Open plass i ${label} · nr. ${slot}</title></path>`);
             }
           }else{
             const id=count+i, p=people[id];
             if(!p) continue;
-            parts.push(`<path class="fan-seg ${p.status}" data-person="${id}" d="${seg(r1,r2,a1,a2)}"><title>${p.name} · ${p.life}</title></path>`);
+            parts.push(`<path class="fan-seg ${p.status}" data-person="${id}" data-ah="${id}" d="${seg(r1,r2,a1,a2)}"><title>${p.name} · ${p.life}</title></path>`);
           }
         }
       }
-      $("fan-holder").innerHTML=`<svg viewBox="0 0 840 430" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Anevifte med åtte ledd og kjeldestatus">${parts.join("")}</svg>`;
+      $("fan-holder").innerHTML=`<svg viewBox="0 0 840 430" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Anevifte med åtte ledd og kjeldestatus">${parts.join("")}<path class="kinship-line" id="kinship-line" d=""></path></svg>`;
       updateFanSelection();
     }
     function updateFanSelection(){
       document.querySelectorAll(".fan-seg").forEach(el=>el.classList.toggle("selected",Number(el.dataset.person)===selectedId));
+      drawKinship();
+    }
+    function drawKinship(){
+      const line=document.getElementById("kinship-line"); if(!line) return;
+      const segs=[...document.querySelectorAll(".fan-seg.selected")];
+      let d="";
+      segs.forEach(el=>{
+        const ah=Number(el.dataset.ah); if(!ah||ah<=1) return;
+        const [x1,y1]=centroidFromAh(ah), [x2,y2]=centroidFromAh(Math.floor(ah/2));
+        d+=`M${x1.toFixed(1)} ${y1.toFixed(1)} L${x2.toFixed(1)} ${y2.toFixed(1)} `;
+      });
+      line.setAttribute("d", d.trim());
+      const reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion:reduce)").matches;
+      if(!d || reduce || !line.getTotalLength){ line.style.strokeDasharray=""; line.style.strokeDashoffset=""; return; }
+      const len=line.getTotalLength();
+      line.style.transition="none";
+      line.style.strokeDasharray=len; line.style.strokeDashoffset=len;
+      void line.getBoundingClientRect();
+      line.style.transition="stroke-dashoffset .45s ease";
+      line.style.strokeDashoffset="0";
     }
     function renderStats(){
       const all=Object.values(people);
