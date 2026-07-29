@@ -3294,7 +3294,7 @@
       "status": "documented",
       "place": "Øvre Fyllingen, Fana",
       "work": "",
-      "notes": "Far til Marthe Olsdatter. Dåpsinnførsla hennar frå 1811 namngjev Ole Olsen og Inge Endresdatter på Øvre Fyllingen som foreldra. Vigsla til Marthe i 1845 oppgir same fødestad og eit fødselsår kring 1812, og bind dermed dåpsbarnet til personen i dette treet.",
+      "notes": "Far til Marthe Olsdatter. Dåpsinnførsla hennar frå 1811 namngjev Ole Olsen og Inge Endresdatter på Øvre Fyllingen som foreldra. Vigsla til Marthe i 1845 oppgir same fødestad og eit fødselsår kring 1812, og bind dermed dåpsbarnet til personen i dette treet.\n\n## Slektskryssing\nOle Olsen var far til både Marthe Olsdatter og Rasmus Olsen, som begge er anar i lina. Han står difor på to plassar i vifta.",
       "src": [
         [
           "Dåp 1811: Marthe, dotter av Ole Olsen og Inge Endresdatter på Øvre Fyllingen",
@@ -4168,6 +4168,92 @@
         ]
       ],
       "deep": true
+    },
+    "174": {
+      "id": 174,
+      "name": "Ole Olsen Noraas",
+      "life": "f. ca. 1730",
+      "status": "probable",
+      "place": "Noraas, Fana",
+      "work": "",
+      "notes": "Truleg far til Ole Olsen Øvre Fyllingen. Ein Ole Olsen vart døypt i Fana 6. januar 1765, med foreldra Ole Olsen på Noraas og Martha Zachariædatter.\n\n## Kjeldekritikk\nKoplinga er sannsynleg, ikkje sikker. Ole Olsen Øvre Fyllingen var 37 år i 1801 (fødd kring 1764) og gifta seg som ungkar frå Hollen i 1784 — alder og namn passar godt med dåpsbarnet frå januar 1765. Men «Ole Olsen» er eit svært vanleg namn i Fana i denne tida, og ingen kjelde bind Noraas-barnet direkte til Hollen eller Øvre Fyllingen. Statusen er difor gul til ei kjelde stadfestar identiteten.",
+      "src": [
+        [
+          "Dåp 6. januar 1765 i Fana: Ole, son av Ole Olsen Noraas og Martha Zachariædatter",
+          "https://www.digitalarkivet.no/view/255/pd00000002780131"
+        ]
+      ],
+      "deep": true
+    },
+    "175": {
+      "id": 175,
+      "name": "Martha Zachariædatter",
+      "life": "datoar ukjende",
+      "status": "probable",
+      "place": "Noraas, Fana",
+      "work": "",
+      "notes": "Truleg mor til Ole Olsen Øvre Fyllingen, namngjeven saman med Ole Olsen på Noraas i dåpen til sonen Ole i Fana 6. januar 1765.\n\n## Kjeldekritikk\nSame atterhald som for mannen: dåpen er primærkjelde, men bindinga til Ole Olsen på Øvre Fyllingen kviler på alders- og namnesamanfall, ikkje på ei kjelde som knyter Noraas-barnet til Hollen eller Øvre Fyllingen.",
+      "src": [
+        [
+          "Dåp 6. januar 1765 i Fana: Ole, son av Ole Olsen Noraas og Martha Zachariædatter",
+          "https://www.digitalarkivet.no/view/255/pd00000002780131"
+        ]
+      ],
+      "deep": true
+    },
+    "176": {
+      "id": 176,
+      "name": "Noe Jacobsen Eldevik",
+      "life": "1733–1801",
+      "status": "probable",
+      "place": "Eldevik, Davik",
+      "work": "",
+      "notes": "Truleg far til Simon Noesen. Patronymet Noesen krev ein far med namnet Noe, og Simon budde på Eldevik i Davik — same gard som Noe Jacobsen. Han er ført som levande i folketeljinga 1801 (teljinga var 1. februar).\n\n## Kjeldekritikk\nKoplinga er indisium, ikkje prov. Simon står IKKJE i Noe sitt hushald i 1801-teljinga — han kan ha vore i teneste annan stad. Det som støttar farskapen: patronymet Noesen, felles gard Eldevik, og eit oppkallingsmønster som passar godt (Noe si kone heitte Ragnhild Simonsdatter → sonen fekk namnet Simon; Simon sitt barnebarn heiter Oline Noesdatter → etter oldefaren Noe). Det finst berre éin Noe Jacobsen på Eldevik i Davik, så risikoen for namnesamanfall er låg. For grøn status trengst dåpen til Simon i Davik (truleg 1795–1805), som vil namngje foreldra direkte.",
+      "src": [],
+      "deep": true
+    },
+    "177": {
+      "id": 177,
+      "name": "Ragnhild Simonsdatter Eldevik",
+      "life": "datoar ukjende",
+      "status": "probable",
+      "place": "Eldevik, Davik",
+      "work": "",
+      "notes": "Truleg mor til Simon Noesen og kona til Noe Jacobsen Eldevik. Namnet hennar, Ragnhild Simonsdatter, passar med oppkallingsmønsteret: sonen fekk namnet Simon etter morfaren.\n\n## Kjeldekritikk\nSame atterhald som for Noe Jacobsen — koplinga kviler på patronym og oppkalling, ikkje på ei dåpsinnførsel som namngjev Simon sine foreldre direkte.",
+      "src": [],
+      "deep": true
+    },
+    "178": {
+      "id": 178,
+      "name": "Anders Olsen Fluge",
+      "life": "1726–1816",
+      "status": "probable",
+      "place": "Fluge, Jølster",
+      "work": "",
+      "notes": "Truleg far til Anne Andersdotter Hegrenes. Patronymet Andersdotter krev ein far ved namn Anders, og Anders Olsen Fluge er ein kandidat i rett tid og på rett stad.\n\n## Kjeldekritikk\nKoplinga er ført av ein annan granskar på Geni.com; ho er ikkje verifisert mot primærkjelde. Eit søk gjennom dei transkriberte kjeldene fann korkje Anders eller kona i folketeljinga 1801 for Jølster — han kan ha vore død før 1801, eller «Fluge» kan vere eit bruksnamn under eit anna matrikkelnamn. Statusen er difor gul. For grøn status trengst ei primærkjelde som bind Anne direkte til dette ekteparet — helst dåpen hennar kring 1776 i Jølster/Førde, som namngjev foreldra.",
+      "src": [
+        [
+          "Kopla av annan granskar på Geni.com (sekundærkjelde, primærkjelde ikkje verifisert)",
+          "https://www.geni.com/"
+        ]
+      ],
+      "deep": true
+    },
+    "179": {
+      "id": 179,
+      "name": "Christi Larsdotter Leergrovsbakke",
+      "life": "f. 1735",
+      "status": "probable",
+      "place": "Leergrovsbakke, Jølster",
+      "work": "",
+      "notes": "Truleg mor til Anne Andersdotter Hegrenes og kona til Anders Olsen Fluge.\n\n## Kjeldekritikk\nSame atterhald som for mannen: koplinga er ført på Geni.com, men ikkje stadfesta med primærkjelde. Ho er ikkje funnen i folketeljinga 1801 for Jølster gjennom transkriberte søk.",
+      "src": [
+        [
+          "Kopla av annan granskar på Geni.com (sekundærkjelde, primærkjelde ikkje verifisert)",
+          "https://www.geni.com/"
+        ]
+      ],
+      "deep": true
     }
   },
   "deepLinks": {
@@ -4510,7 +4596,10 @@
       ]
     },
     "94": {
-      "child": 47
+      "parents": [
+        176,
+        177
+      ]
     },
     "95": {
       "child": 35,
@@ -4646,7 +4735,10 @@
       ]
     },
     "125": {
-      "child": 49
+      "parents": [
+        174,
+        175
+      ]
     },
     "126": {
       "child": 49
@@ -4768,7 +4860,11 @@
       "child": 86
     },
     "164": {
-      "child": 37
+      "child": 37,
+      "parents": [
+        178,
+        179
+      ]
     },
     "172": {
       "child": 43
@@ -4940,7 +5036,13 @@
         169,
         170,
         171,
-        173
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179
       ]
     },
     {
