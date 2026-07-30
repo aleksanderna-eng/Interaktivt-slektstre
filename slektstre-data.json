@@ -1,7 +1,7 @@
 {
   "meta": {
-    "versjon": 30,
-    "dato": "2026-07-27",
+    "versjon": 31,
+    "dato": "2026-07-30",
     "note": "Data skilt frå visning. media[personId] er ei liste med {type:\"image\"|\"video\", src, cap}. Legg til fleire objekt for fleire bilete; bruk type:\"video\" og ein videofil (t.d. video/…​.mp4) for film. Rediger denne fila for å endre innhald."
   },
   "people": {
@@ -2717,8 +2717,8 @@
       "life": "døypt 30.08.1812",
       "status": "documented",
       "place": "Mørk, Ytre Holmedal",
-      "work": "",
-      "notes": "Far til Johanne Margrethe. Dåpsinnførsla frå Holmedal 30. august 1812 fører han som Peder Chrispinussen Mørch, ektefødd son av Chrispinus Rasmussen Mørk og Martha Pettersdotter Mørk.\n\n## Namneretting\nNamnet stod tidlegare i treet som «Peder Christiansen Mørk». Primærkjelda viser at dette var ei feillesing: patronymet er Chrispinussen, etter faren Chrispinus.",
+      "work": "Gardmann og ordførar",
+      "notes": "Far til Johanne Margrethe. Dåpsinnførsla frå Holmedal 30. august 1812 fører han som Peder Chrispinussen Mørch, ektefødd son av Chrispinus Rasmussen Mørk og Martha Pettersdotter Mørk.\n\n## Namneretting\nNamnet stod tidlegare i treet som «Peder Christiansen Mørk». Primærkjelda viser at dette var ei feillesing: patronymet er Chrispinussen, etter faren Chrispinus.\n\n## Ordførar\nEtter D.O. Bakke, «Fjaler i gamle dagar», var Peder Mørk ordførar i Ytre Holmedal (Fjaler) frå 1863 til 1868.",
       "src": [
         [
           "Dåp 4. august 1839: Johanne Magretha, fødd 23. juli; foreldre Peder Christiansen på Mørk og Wilhelmine Sophie på Liset",
@@ -2731,6 +2731,10 @@
         [
           "Dåp 1812: Peder Chrispinussen Mørch, Holmedal",
           "https://www.digitalarkivet.no/view/255/pd00000008396245"
+        ],
+        [
+          "D.O. Bakke: Fjaler i gamle dagar — Peder Mørk som ordførar 1863–1868",
+          "https://www.nb.no/items/59f0747c3d76e74c37ffbeedd136c4ae?page=275"
         ]
       ],
       "deep": true
@@ -4254,6 +4258,122 @@
         ]
       ],
       "deep": true
+    },
+    "180": {
+      "id": 180,
+      "name": "Karen Gjertsdatter Dybvik",
+      "life": "datoar ukjende",
+      "status": "documented",
+      "place": "Dybvik, Borgund",
+      "work": "",
+      "notes": "Mor til Karoline Olsdatter. Namngjeven som mor i dåpsinnførsla til dottera — ført «Siri Karoline», nr. 26 i 1821 — i klokkarboka for Borgund. Slektsplassen (7. ledd, morssida, nr. 123) stod tidlegare open; kjelda bind Karoline til denne mora. Foreldra til Karen sjølv er enno ikkje kjende.",
+      "src": [
+        [
+          "Klokkarbok for Borgund 1816–1827, s. 87, innførsel nr. 26: dåpen til Siri Karoline (1821), mora Karen Gjertsdatter Dybvik",
+          "https://media.digitalarkivet.no/view/16011/46"
+        ]
+      ],
+      "deep": true
+    },
+    "181": {
+      "id": 181,
+      "name": "Anders Hansen",
+      "life": "f. ca. 1749",
+      "status": "documented",
+      "place": "Tønsnes, Tromsøysund",
+      "work": "Inderst og fiskar",
+      "notes": "Far til Hans Peder Andersen Vågnes. I folketeljinga 1801 bur han på Tønsnes saman med kona Adelus Jensdotter og den 20 år gamle sonen Hans Peder; Anders livnærer seg av fiske saman med sonen og dottera. Identiteten til Vågnes er knytt gjennom dåpen til sonesonen Jacob Helmer i 1819, der Hans Peder står som «Hans Peder Andersß Vognæs».",
+      "src": [
+        [
+          "Folketeljinga 1801: Hans Peder Andersen, 20 år, i hushaldet til Anders Hansen og Adelus Jensdotter på Tønsnes",
+          "https://www.digitalarkivet.no/census/person/pf01058491000391"
+        ],
+        [
+          "Dåp 1819: Jacob Helmer, far «Hans Peder Andersß Vognæs»",
+          "https://www.digitalarkivet.no/view/255/pd00000044318253"
+        ]
+      ],
+      "deep": true
+    },
+    "182": {
+      "id": 182,
+      "name": "Adelus Jensdotter",
+      "life": "f. ca. 1750",
+      "status": "documented",
+      "place": "Tønsnes, Tromsøysund",
+      "work": "",
+      "notes": "Mor til Hans Peder Andersen Vågnes. I folketeljinga 1801 kona til Anders Hansen på Tønsnes, i same hushald som den 20 år gamle sonen Hans Peder.",
+      "src": [
+        [
+          "Folketeljinga 1801: Adelus Jensdotter og Anders Hansen på Tønsnes, med sonen Hans Peder",
+          "https://www.digitalarkivet.no/census/person/pf01058491000391"
+        ]
+      ],
+      "deep": true
+    },
+    "183": {
+      "id": 183,
+      "name": "Fredrik Arild",
+      "life": "f. ca. 1761",
+      "status": "documented",
+      "place": "Finnkroken på Reinøya, Tromsø",
+      "work": "Festebonde og fiskar",
+      "notes": "Far til Adrian Fredriksen. I folketeljinga 1801 for Finnkroken er han ført som «Fridric Arild», 40 år, festebonde og fiskar, saman med kona Elen Elisabeth Heggelund. Adrian, 13 år, står uttrykkeleg som «fælles børn af dette ægteskab».",
+      "src": [
+        [
+          "Folketeljinga 1801, Finnkroken: Fridric Arild (40) og Elen Elisabeth Heggelund (39), med sonen Adrian Falch (13)",
+          "https://www.digitalarkivet.no/census/person/pf01058491003076"
+        ]
+      ],
+      "deep": true
+    },
+    "184": {
+      "id": 184,
+      "name": "Elen Elisabeth Heggelund",
+      "life": "f. ca. 1762",
+      "status": "documented",
+      "place": "Finnkroken på Reinøya, Tromsø",
+      "work": "",
+      "notes": "Mor til Adrian Fredriksen. I folketeljinga 1801 for Finnkroken kona til Fridric Arild, 39 år; Adrian er ført som fellesbarn av ekteskapet.",
+      "src": [
+        [
+          "Folketeljinga 1801, Finnkroken: Elen Elisabeth Heggelund (39) og Fridric Arild, med sonen Adrian",
+          "https://www.digitalarkivet.no/census/person/pf01058491003076"
+        ]
+      ],
+      "deep": true
+    },
+    "185": {
+      "id": 185,
+      "name": "Peder Pedersen Overå",
+      "life": "datoar ukjende",
+      "status": "documented",
+      "place": "Overå, Ulstein",
+      "work": "Gardmann",
+      "notes": "Far til Ole (Andreas) Pedersen Ytre Dimmen. Dåpsinnførsla for Ole Andreas, fødd 12. november 1800, fører foreldra som Peder Pedersen og Agathe Knutsdotter på Overå. Namneforma Ole Andreas Pedersen Overå er knytt til personen gjennom vigsla hans i 1833 med Petrine Knutsdotter, der faren er oppført som Peder Overå.",
+      "src": [
+        [
+          "Skanna kyrkjebok: dåp Ole Andreas Pedersen Overå, fødd 12.11.1800, foreldre Peder Pedersen og Agathe Knutsdotter på Overå",
+          "https://media.digitalarkivet.no/view/15951/11"
+        ]
+      ],
+      "deep": true
+    },
+    "186": {
+      "id": 186,
+      "name": "Agathe Knutsdotter",
+      "life": "datoar ukjende",
+      "status": "documented",
+      "place": "Sulebust; seinare Overå, Ulstein",
+      "work": "",
+      "notes": "Mor til Ole (Andreas) Pedersen Ytre Dimmen. Ført saman med Peder Pedersen på Overå i dåpsinnførsla til Ole Andreas (fødd 12.11.1800). Kom frå Sulebust.",
+      "src": [
+        [
+          "Skanna kyrkjebok: dåp Ole Andreas Pedersen Overå, fødd 12.11.1800, mora Agathe Knutsdotter",
+          "https://media.digitalarkivet.no/view/15951/11"
+        ]
+      ],
+      "deep": true
     }
   },
   "deepLinks": {
@@ -4429,7 +4549,8 @@
     },
     "61": {
       "parents": [
-        110
+        110,
+        180
       ]
     },
     "62": {
@@ -4649,7 +4770,11 @@
       "child": 60
     },
     "104": {
-      "child": 62
+      "child": 62,
+      "parents": [
+        185,
+        186
+      ]
     },
     "105": {
       "child": 63
@@ -4836,13 +4961,21 @@
       "child": 53
     },
     "156": {
-      "child": 58
+      "child": 58,
+      "parents": [
+        181,
+        182
+      ]
     },
     "157": {
       "child": 58
     },
     "158": {
-      "child": 59
+      "child": 59,
+      "parents": [
+        183,
+        184
+      ]
     },
     "159": {
       "child": 59
@@ -4871,6 +5004,27 @@
     },
     "173": {
       "child": 86
+    },
+    "180": {
+      "child": 61
+    },
+    "181": {
+      "child": 156
+    },
+    "182": {
+      "child": 156
+    },
+    "183": {
+      "child": 158
+    },
+    "184": {
+      "child": 158
+    },
+    "185": {
+      "child": 104
+    },
+    "186": {
+      "child": 104
     }
   },
   "generation7": {
@@ -4934,7 +5088,8 @@
     "124": 104,
     "125": 118,
     "126": 105,
-    "127": 119
+    "127": 119,
+    "123": 180
   },
   "deepGroups": [
     {
@@ -4999,7 +5154,8 @@
         118,
         105,
         119,
-        172
+        172,
+        180
       ]
     },
     {
@@ -5082,6 +5238,18 @@
       "label": "12. ledd · mogleg eldre Wrangel",
       "ids": [
         78
+      ]
+    },
+    {
+      "num": 8,
+      "label": "8. ledd · nyleg dokumenterte foreldre (Troms og Sunnmøre)",
+      "ids": [
+        181,
+        182,
+        183,
+        184,
+        185,
+        186
       ]
     }
   ],
@@ -5275,6 +5443,13 @@
         "type": "image",
         "src": "bileteslekt/hus-husmannsplass.jpg",
         "cap": "Husmannsplassen Hus i Jølster. Slåttonn ved vatnet."
+      }
+    ],
+    "95": [
+      {
+        "type": "image",
+        "src": "bileteslekt/peder-mork.jpg",
+        "cap": "Peder Chrispinussen Mørk, ordførar i Ytre Holmedal (Fjaler) 1863–1868. Bilete tilført av familien."
       }
     ]
   },
