@@ -1,6 +1,6 @@
 {
   "meta": {
-    "versjon": 31,
+    "versjon": 32,
     "dato": "2026-07-30",
     "note": "Data skilt frå visning. media[personId] er ei liste med {type:\"image\"|\"video\", src, cap}. Legg til fleire objekt for fleire bilete; bruk type:\"video\" og ein videofil (t.d. video/…​.mp4) for film. Rediger denne fila for å endre innhald."
   },
@@ -2802,15 +2802,19 @@
     "98": {
       "id": 98,
       "name": "Mari Johansdatter",
-      "life": "datoar ukjende",
+      "life": "f. 1775",
       "status": "documented",
       "place": "Tonneim, Kinn",
       "work": "",
-      "notes": "Kona til Halvor Bertelsen og mor til Daniel (nr. 40) og Elias (nr. 42). Namngjeven som «Mari Johansdtr, Hans Huustrue» i dåpsinnførsla til Daniel i 1812.",
+      "notes": "Kona til Halvor Bertelsen og mor til Daniel (nr. 40) og Elias (nr. 42). Namngjeven som «Mari Johansdtr, Hans Huustrue» i dåpsinnførsla til Daniel i 1812. Døypt 12.11.1775 i Øn sokn (Askvoll); far Johannes på Hersvik. Alderen (79) i dødsinnførsla på Tonneim 1854 samsvarer.",
       "src": [
         [
           "Dåp 1812: Daniel, døypt 18.05.1812 i Svanøe sokn; far Halvor Bertelsøn (Tonnum), mor Mari Johansdtr (Hans Huustrue)",
           "https://www.digitalarkivet.no/view/255/pd00000001843387"
+        ],
+        [
+          "Dåp 1775: Mari, døypt 12.11.1775 i Øn sokn; far «Johanes paa Hertzvig» (Hersvik). Askvoll ministerialbok 1749–1775, s. 132–133",
+          "https://media.digitalarkivet.no/view/8596/141"
         ]
       ],
       "deep": true
@@ -4374,6 +4378,22 @@
         ]
       ],
       "deep": true
+    },
+    "187": {
+      "id": 187,
+      "name": "Johannes Hersvik",
+      "life": "datoar ukjende",
+      "status": "documented",
+      "place": "Hersvik, Askvoll",
+      "work": "",
+      "notes": "Far til Mari Johansdatter (nr. 81). Namngjeven som «Johanes paa Hertzvig» (Hersvik) i dåpsinnførsla til dottera Mari 12. november 1775 i Øn sokn.\n\nMora til Mari er ikkje namngjeven i innførsla, og er difor medvite ikkje ført opp. Alderen i dødsinnførsla til Mari på Tonneim i 1854 (79 år) samsvarer med dåpen i 1775. Patronymet hans er ukjent — dåpsposten gjev berre førenamn og gard.",
+      "src": [
+        [
+          "Dåp 1775: Mari, døypt 12.11.1775 i Øn sokn; far «Johanes paa Hertzvig». Askvoll ministerialbok 1749–1775, s. 132–133",
+          "https://media.digitalarkivet.no/view/8596/141"
+        ]
+      ],
+      "deep": true
     }
   },
   "deepLinks": {
@@ -4744,7 +4764,10 @@
       ]
     },
     "98": {
-      "child": 40
+      "child": 40,
+      "parents": [
+        187
+      ]
     },
     "99": {
       "child": 97
@@ -5025,6 +5048,9 @@
     },
     "186": {
       "child": 104
+    },
+    "187": {
+      "child": 98
     }
   },
   "generation7": {
@@ -5198,7 +5224,8 @@
         176,
         177,
         178,
-        179
+        179,
+        187
       ]
     },
     {
