@@ -9,7 +9,7 @@
     @keyframes detail-in{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
     #detail-panel.detail-anim{animation:detail-in .24s ease}
     @media (prefers-reduced-motion:reduce){.fan-seg{transition:none}#detail-panel.detail-anim{animation:none}.kinship-line{transition:none!important}}
-    .to-fan{position:fixed;right:18px;bottom:18px;z-index:40;border:1px solid color-mix(in srgb,var(--pine) 55%,var(--line));background:var(--pine);color:white;border-radius:999px;padding:10px 15px;font-size:12px;font-weight:800;letter-spacing:.03em;cursor:pointer;box-shadow:0 8px 22px color-mix(in srgb,var(--ink) 25%,transparent);opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .18s,transform .18s}.to-fan.show{opacity:1;transform:none;pointer-events:auto}.to-fan:hover{background:color-mix(in srgb,var(--pine) 85%,white)}
+    .to-fan{position:fixed;right:18px;bottom:18px;z-index:40;border:1px solid color-mix(in srgb,var(--pine) 55%,var(--line));background:var(--pine);color:white;border-radius:999px;padding:10px 15px;font-size:12px;font-weight:800;letter-spacing:.03em;cursor:pointer;box-shadow:0 8px 22px color-mix(in srgb,var(--ink) 25%,transparent);opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .18s,transform .18s}.to-fan.show{opacity:1;transform:none;pointer-events:auto}.to-fan:hover{background:color-mix(in srgb,var(--pine) 85%,white)}.fan-actions{display:flex;justify-content:center;margin:6px 0 2px}.clear-focus{border:1px solid var(--line);background:var(--card);color:var(--muted);border-radius:999px;padding:6px 14px;font-size:11.5px;font-weight:800;letter-spacing:.02em;cursor:pointer;transition:border-color .15s,color .15s,background .15s}.clear-focus:hover{border-color:var(--moss);color:var(--ink);background:color-mix(in srgb,var(--moss) 8%,var(--card))}.clear-focus[hidden]{display:none}.detail-empty-msg{font-size:13px;line-height:1.5;color:var(--muted);margin:6px 0 0}
     .slekt-toolbar{display:grid;grid-template-columns:minmax(0,1fr) minmax(210px,.55fr);gap:12px;align-items:end;margin:18px 0}.slekt-label{display:block;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}.slekt-chips{display:flex;flex-wrap:wrap;gap:7px}.slekt-chip,.slekt-search{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;min-height:38px}.slekt-chip{padding:8px 12px;font-weight:700;font-size:12px;cursor:pointer}.slekt-chip:hover{border-color:var(--moss)}.slekt-chip.active{background:var(--accent);color:white;border-color:var(--accent)}.slekt-chip.chip-deep{border-color:color-mix(in srgb,var(--gold) 55%,var(--line));box-shadow:inset 3px 0 0 var(--gold)}.slekt-chip.chip-deep.active{background:color-mix(in srgb,var(--gold) 78%,var(--ink));border-color:color-mix(in srgb,var(--gold) 78%,var(--ink))}.slekt-search{width:100%;padding:9px 13px;border-radius:12px;outline:none}.slekt-search:focus{border-color:var(--moss);box-shadow:0 0 0 3px color-mix(in srgb,var(--moss) 18%,transparent)}
     .slekt-main{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(250px,.68fr);gap:15px;align-items:start}.slekt-tree,.slekt-detail{background:color-mix(in srgb,var(--card) 94%,var(--panel));border:1px solid var(--line);border-radius:17px}.slekt-tree{padding:16px}.slekt-view-title{display:flex;justify-content:space-between;gap:10px;align-items:baseline;margin-bottom:12px}.slekt-view-title h2{font-family:Georgia,serif;font-size:21px;margin:0}.slekt-view-title span{font-size:11px;color:var(--muted)}
     .gen-band{position:relative;padding:12px 0 13px}.gen-band+.gen-band{border-top:1px dashed var(--line)}.gen-head{display:flex;align-items:center;gap:8px;margin-bottom:9px}.gen-num{width:25px;height:25px;border-radius:50%;display:grid;place-items:center;background:color-mix(in srgb,var(--pine) 12%,var(--card));color:var(--pine);font-weight:900;font-size:11px}.gen-name{font-weight:800;font-size:12px}.gen-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));gap:8px}.deep-band .gen-head{align-items:flex-start}.deep-band .gen-num{background:color-mix(in srgb,var(--gold) 18%,var(--card));color:color-mix(in srgb,var(--gold) 72%,var(--ink))}.person-card{position:relative;text-align:left;border:1px solid var(--line);border-radius:13px;background:var(--card);padding:11px 11px 10px;cursor:pointer;min-height:78px;color:var(--ink);box-shadow:0 3px 10px color-mix(in srgb,var(--ink) 5%,transparent)}.person-card:hover,.person-card.selected{transform:translateY(-1px);border-color:var(--moss);box-shadow:0 7px 18px color-mix(in srgb,var(--ink) 10%,transparent)}.person-card.selected{outline:2px solid color-mix(in srgb,var(--moss) 28%,transparent)}.person-card.open{background:repeating-linear-gradient(135deg,var(--card),var(--card) 8px,color-mix(in srgb,var(--open) 7%,var(--card)) 8px,color-mix(in srgb,var(--open) 7%,var(--card)) 16px);opacity:.62}.person-card.open .person-name{font-style:italic;font-weight:400}.person-card.open:hover,.person-card.open.selected{opacity:1}.person-name{display:block;font-family:Georgia,serif;font-weight:700;font-size:14px;line-height:1.15;padding-right:12px}.person-life{display:block;color:var(--muted);font-size:11px;margin-top:6px}.person-place{display:block;color:var(--moss);font-size:10px;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.status-dot{position:absolute;right:9px;top:10px;width:8px;height:8px;border-radius:50%}.documented .status-dot{background:var(--pine)}.family .status-dot{background:var(--violet)}.probable .status-dot{background:var(--gold)}.open .status-dot{background:var(--open)}.person-card.documented{border-left:3px solid var(--pine)}.person-card.family{border-left:3px solid var(--violet)}.person-card.probable{border-left:3px solid var(--gold)}.person-card.open{border-left:3px solid color-mix(in srgb,var(--open) 55%,var(--line))}.tree-focus .person-card:not(.kin){opacity:.3;transition:opacity .2s ease}.tree-focus .person-card.kin{opacity:1}.tree-focus .person-card.kin:not(.selected){border-color:color-mix(in srgb,var(--moss) 45%,var(--line));box-shadow:0 5px 14px color-mix(in srgb,var(--moss) 16%,transparent)}.tree-focus .person-card:hover{opacity:1}
@@ -50,6 +50,7 @@
     <details class="fan-wrap" open>
       <summary>Oversynsvifte · 255 plassar gjennom åtte ledd</summary>
       <div class="fan-holder" id="fan-holder"></div>
+      <div class="fan-actions"><button class="clear-focus" id="clear-focus" type="button" hidden>✕ Vis heile vifta att</button></div>
       <p class="fan-caption">Farssida til venstre, morssida til høgre. Sjuande ring: <strong>48 grøne segment</strong>, 13 gule og 3 heilt opne plassar. Dei 47 grøne segmenta svarar til 43 ulike dokumenterte personar, sidan nokre anar står to gonger ved ahnenverlust. Åttande ring har <strong>47 fylte plassar</strong> av 128, 33 grøne og 14 gule. Fjorten av dei kom frå folketeljinga 1801: foreldrepara på Hus og Veiteberg i Jølster, på Vagstad og Rivedal i Ytre Holmedal, på Stranden i Askøy og på Volle i Ulstein. Iver Clemetsen på Brattelie er stadfesta grøn gjennom Fjaler-bygdeboka. Dei sju gule er Anne Johannesdatter på Brattelie, Klemet Andersson Hauge på Hauge, Agothe Eliasdatter på Hus, foreldreparet Ole Simonsen og Nille Amundsdatter på Volle, og Simon Torgeirson og Anne Eriksdatter på Hegrenes.</p>
     </details>
 
@@ -152,6 +153,14 @@
       const kin=selectedId?kinIds(selectedId):new Set();
       host.classList.toggle("tree-focus", !!selectedId);
       host.querySelectorAll(".person-card").forEach(el=>el.classList.toggle("kin", kin.has(Number(el.dataset.person))));
+    }
+    function updateClearBtn(){
+      const btn=$("clear-focus"); if(!btn) return;
+      btn.hidden = !(selectedId!=null && selectedId!==1);
+    }
+    function clearSelection(){
+      selectedId=null; mediaIndex=0;
+      renderTree(); renderDetail(); updateFanSelection();
     }
 
     function idsForBranch(root){
@@ -300,7 +309,13 @@
       return `<figure class="detail-media"><div class="media-stage">${stage}${nav}</div>${dots}${cap}</figure>`;
     }
     function renderDetail(){
+      updateClearBtn();
       const p=people[selectedId];
+      if(!p){
+        $("detail-panel").innerHTML=`<div class="detail-eyebrow">Inga markering</div><p class="detail-empty-msg">Trykk på ein person i vifta eller lista for å lyfte fram slektslina. Heile vifta er no vist likt.</p>`;
+        const dp0=$("detail-panel"); dp0.classList.remove("detail-anim"); void dp0.offsetWidth; dp0.classList.add("detail-anim");
+        return;
+      }
       const {parents,child}=relations(selectedId);
       const relItems=[...(child?[relChip(child,"Barn")]:[]),...parents.map((id,i)=>relChip(id,i===0?"Far":"Mor"))];
       const relHtml=relItems.length?`<div class="detail-row"><dt>Gå til</dt><dd><div class="rel-list">${relItems.join("")}</div></dd></div>`:"";
@@ -441,6 +456,7 @@
     // og blir aldri fest på nytt, så han fungerer uansett kor mange gonger innhaldet
     // blir bygd opp att.
     document.addEventListener("click",e=>{
+      if(e.target.closest("#clear-focus")){ clearSelection(); return; }
       const navEl=e.target.closest("[data-media-nav]");
       if(navEl){
         const items=media[selectedId]||[];
@@ -476,6 +492,7 @@
       }
     });
     document.addEventListener("keydown",e=>{
+      if(e.key==="Escape"){ if(selectedId!=null && selectedId!==1) clearSelection(); return; }
       if(e.key!=="ArrowLeft" && e.key!=="ArrowRight") return;
       const el=document.activeElement;
       if(el && (el.tagName==="INPUT" || el.tagName==="TEXTAREA" || el.tagName==="VIDEO")) return;
