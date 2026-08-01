@@ -294,7 +294,7 @@
       const m = items[i];
       const alt = (m.cap || ("Bilete av " + people[id].name)).replace(/"/g,"&quot;");
       const stage = m.type === "video"
-        ? `<video class="media-el" src="${m.src}" controls preload="metadata"${m.poster?` poster="${m.poster}"`:""}></video>`
+        ? `<video class="media-el" src="${m.src}" controls autoplay muted playsinline preload="auto"${m.poster?` poster="${m.poster}"`:""}></video>`
         : `<img class="media-el" src="${m.src}" alt="${alt}" loading="lazy">`;
       const many = items.length > 1;
       const nav = many
