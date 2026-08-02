@@ -1,7 +1,7 @@
 {
   "meta": {
-    "versjon": 33,
-    "dato": "2026-08-01",
+    "versjon": 34,
+    "dato": "2026-08-02",
     "note": "Data skilt frå visning. media[personId] er ei liste med {type:\"image\"|\"video\", src, cap}. Legg til fleire objekt for fleire bilete; bruk type:\"video\" og ein videofil (t.d. video/…​.mp4) for film. Rediger denne fila for å endre innhald."
   },
   "people": {
@@ -5524,6 +5524,9 @@
       "sokn": "Fjaler",
       "lat": 61.3446,
       "lng": 5.2671,
+      "folk": [
+        146
+      ],
       "match": [
         "Tysse"
       ],
