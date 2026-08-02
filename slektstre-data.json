@@ -1,6 +1,6 @@
 {
   "meta": {
-    "versjon": 34,
+    "versjon": 35,
     "dato": "2026-08-02",
     "note": "Data skilt frå visning. media[personId] er ei liste med {type:\"image\"|\"video\", src, cap}. Legg til fleire objekt for fleire bilete; bruk type:\"video\" og ein videofil (t.d. video/…​.mp4) for film. Rediger denne fila for å endre innhald."
   },
@@ -3146,12 +3146,20 @@
     "116": {
       "id": 116,
       "name": "Andreas Jacobsen Vågnes",
-      "life": "datoar ukjende",
-      "status": "probable",
+      "life": "f. ca. 1798",
+      "status": "documented",
       "place": "Vågnes, Tromsø",
       "work": "",
-      "notes": "Ført i ei slektsoversikt som far til Morten Olai Andreasen, fødd 30. mai 1836 på Vågnes, saman med Johanne Maria Haagensdatter. Namn, patronym og område passar svært godt, men sambandet er enno ikkje kontrollert direkte i den skanna dåpsinnførsla; plassen er difor gul.",
+      "notes": "Far til Morten Olai Andreasen (fødd 30. mai 1836 på Vågnes), saman med Johanne Maria Haagensdatter. Gifta seg 17. oktober 1830 med Johanna Maria Haagensdatter; vigselsinnførsla i klokkarboka for Tromsø oppgjev fødselsår omkring 1798.\n\n## Foreldre stadfesta\nI folketeljinga 1801 på Waagnæss står den to år gamle Andreas Jacobsen uttrykkeleg som «deres søn» til husmannen Jacob Damsen (Adamsen), 35 år, og Giertrud Larsdatter, 24 år. Aldersopplysningane gjev Andreas eit fødselsår omkring 1799, medan vigselsregisteret reknar omkring 1798 — små avvik som er vanlege. Foreldreskapet er direkte stadfesta i primærkjelda.",
       "src": [
+        [
+          "Vigsel 1830: Andreas Jacobsen Vågnes og Johanna Maria Haagensdatter, Tromsø klokkarbok",
+          "https://www.digitalarkivet.no/view/327/pv00000008869081"
+        ],
+        [
+          "Folketeljinga 1801: Andreas Jacobsen (2 år) som «deres søn» hjå Jacob Damsen og Giertrud Larsdatter på Waagnæss",
+          "https://www.digitalarkivet.no/census/person/pf01058491000304"
+        ],
         [
           "Familieoversikt: Andreas Jacobsen og Johanne Maria Haagensdatter med sonen Morten Olai, fødd 30. mai 1836 på Vågnes",
           "https://hahne.no/tng/familygroup.php?familyID=F9380&tree=ah1"
@@ -3758,12 +3766,24 @@
     "151": {
       "id": 151,
       "name": "Jon Olsen Store Sleire",
-      "life": "levde 1804",
-      "status": "probable",
-      "place": "Store Sleire, Lindås",
+      "life": "ca. 1766–01.08.1838",
+      "status": "documented",
+      "place": "Store Sleire, Masfjorden (Lindås)",
       "work": "",
-      "notes": "Sannsynleg far til Nils Johnsen Korsøen. Dåpen frå 1804 namngjev Jon Olsen og Gunnilda Hansdatter som foreldre til Niels på Store Sleire; vigsla i 1834 fører Niels Jonsson, 30 år, frå same gard. Farsrubrikken i vigselstranskripsjonen er avvikande, så sambandet står gult.",
+      "notes": "Fødd omkring 1766; dødsinnførsla 1. august 1838 på Store Sleire oppgjev alderen 72 år. Gifta seg 5. juli 1794 med Gunnilde Hansdotter frå Sleire.\n\n## Foreldre\nDåpen 15. mai 1766 fører guten Joen med soldat Ole Olsen «Baches (Slejre)» som far. Mora var Lisbeth Joensdotter Risnes, som gifta seg med Ole Olsen Bache 5. juli 1761; ho står ikkje i dåpsinnførsla, så morslekkja byggjer på foreldrevigsla og dåpen fem år seinare.\n\n## Barn\nFar til Nils Johnsen Korsøen. Dåpen frå 1804 namngjev Jon Olsen og Gunnilda Hansdatter som foreldre til Niels på Store Sleire; vigsla i 1834 fører Niels Jonsson, 30 år, frå same gard.",
       "src": [
+        [
+          "Død 1838: Jon Olsen Store Sleire, 72 år",
+          "https://www.digitalarkivet.no/view/267/pg00000000216081"
+        ],
+        [
+          "Vigsel 1794: Jon Olsen Store Sleire og Gunnilde Hansdotter",
+          "https://www.digitalarkivet.no/view/327/pv00000000610724"
+        ],
+        [
+          "Dåp 1766: Joen, far soldat Ole Olsen «Baches (Slejre)»",
+          "https://www.digitalarkivet.no/view/255/pd00000004283032"
+        ],
         [
           "Dåp 1804: Niels, son av Jon Olsen og Gunnilda Hansdatter på Store Sleire",
           "https://www.digitalarkivet.no/view/255/pd00000007210126"
@@ -4394,6 +4414,74 @@
         ]
       ],
       "deep": true
+    },
+    "188": {
+      "id": 188,
+      "name": "Jacob Adamsen",
+      "life": "f. ca. 1766",
+      "status": "documented",
+      "place": "Vågnes (Waagnæss), Tromsøysund",
+      "work": "Husmann med jord og fiskar",
+      "notes": "Far til Andreas Jacobsen Vågnes. I folketeljinga 1801 bur han på Waagnæss som husmann med jord og fiskar, 35 år, saman med kona Giertrud Larsdatter (24) og den to år gamle sonen Andreas, som er ført uttrykkeleg som «deres søn».\n\n## Namneform\nSkriven «Jacob Damsen» i teljinga; same namn er normalisert til Jacob Adamsen i sekundærkjelder.",
+      "src": [
+        [
+          "Folketeljinga 1801: Jacob Damsen (35), husmann med jord og fiskar, med sonen Andreas på Waagnæss",
+          "https://www.digitalarkivet.no/census/person/pf01058491000304"
+        ]
+      ],
+      "deep": true
+    },
+    "189": {
+      "id": 189,
+      "name": "Giertrud Larsdatter",
+      "life": "f. ca. 1777",
+      "status": "documented",
+      "place": "Vågnes (Waagnæss), Tromsøysund",
+      "work": "",
+      "notes": "Mor til Andreas Jacobsen Vågnes. I folketeljinga 1801 er ho 24 år og gift med husmannen Jacob Damsen (Adamsen) på Waagnæss; den to år gamle sonen Andreas står som «deres søn».",
+      "src": [
+        [
+          "Folketeljinga 1801: Giertrud Larsdatter (24) med sonen Andreas på Waagnæss",
+          "https://www.digitalarkivet.no/census/person/pf01058491000304"
+        ]
+      ],
+      "deep": true
+    },
+    "190": {
+      "id": 190,
+      "name": "Ole Olsen Bache",
+      "life": "levde 1761–1766",
+      "status": "documented",
+      "place": "Store Sleire, Masfjorden (Lindås)",
+      "work": "Soldat",
+      "notes": "Far til Jon Olsen Store Sleire. Dåpen 15. mai 1766 fører guten Joen med soldat Ole Olsen «Baches (Slejre)» som far. Han gifta seg 5. juli 1761 med Lisbeth Joensdotter Risnes.",
+      "src": [
+        [
+          "Dåp 1766: Joen, far soldat Ole Olsen «Baches (Slejre)»",
+          "https://www.digitalarkivet.no/view/255/pd00000004283032"
+        ],
+        [
+          "Vigsel 1761: soldat Ole Olsen Bache (Slejre) og Lisbeth Joensdotter Risnes",
+          "https://www.digitalarkivet.no/view/327/pv00000000798782"
+        ]
+      ],
+      "deep": true
+    },
+    "191": {
+      "id": 191,
+      "name": "Lisbeth Joensdotter Risnes",
+      "life": "levde 1761",
+      "status": "probable",
+      "place": "Risnes; Store Sleire, Masfjorden (Lindås)",
+      "work": "",
+      "notes": "Mor til Jon Olsen Store Sleire. Ho gifta seg 5. juli 1761 med soldat Ole Olsen Bache (Slejre). Ho står ikkje i dåpsinnførsla til Jon frå 1766; koplinga byggjer på vigsla til foreldra og dåpen fem år seinare, og plassen står difor gul.\n\n## Namneretting\nMasfjordsoga oppgjev henne som Lisbet Olsdotter, men primærkjelda (vigsla 1761) seier tydeleg Lisbeth Joensdtr.",
+      "src": [
+        [
+          "Vigsel 1761: Lisbeth Joensdotter Risnes og soldat Ole Olsen Bache (Slejre)",
+          "https://www.digitalarkivet.no/view/327/pv00000000798782"
+        ]
+      ],
+      "deep": true
     }
   },
   "deepLinks": {
@@ -4840,7 +4928,11 @@
       "child": 46
     },
     "116": {
-      "child": 56
+      "child": 56,
+      "parents": [
+        188,
+        189
+      ]
     },
     "117": {
       "child": 56
@@ -4969,7 +5061,11 @@
       "child": 48
     },
     "151": {
-      "child": 54
+      "child": 54,
+      "parents": [
+        190,
+        191
+      ]
     },
     "152": {
       "child": 54
@@ -5051,6 +5147,18 @@
     },
     "187": {
       "child": 98
+    },
+    "188": {
+      "child": 116
+    },
+    "189": {
+      "child": 116
+    },
+    "190": {
+      "child": 151
+    },
+    "191": {
+      "child": 151
     }
   },
   "generation7": {
@@ -5269,14 +5377,18 @@
     },
     {
       "num": 8,
-      "label": "8. ledd · nyleg dokumenterte foreldre (Troms og Sunnmøre)",
+      "label": "8. ledd · nyleg dokumenterte foreldre (Troms, Sunnmøre og Nordhordland)",
       "ids": [
         181,
         182,
         183,
         184,
         185,
-        186
+        186,
+        188,
+        189,
+        190,
+        191
       ]
     }
   ],
@@ -5360,6 +5472,16 @@
         "src": "bileteslekt/martin-film.mp4",
         "cap": "Filmklipp.",
         "poster": "bileteslekt/martin-film.jpg"
+      },
+      {
+        "type": "image",
+        "src": "bileteslekt/martin-stordalen.jpg",
+        "cap": "Martin med to born på bru i Stordalen. Udatert."
+      },
+      {
+        "type": "image",
+        "src": "bileteslekt/martin-perdy-1946.jpg",
+        "cap": "Martin og Perdy. Bryllaupsfoto, 1946."
       }
     ],
     "7": [
@@ -5373,6 +5495,21 @@
         "src": "bileteslekt/perdy-film.mp4",
         "cap": "Filmklipp.",
         "poster": "bileteslekt/perdy-film.jpg"
+      },
+      {
+        "type": "image",
+        "src": "bileteslekt/perdy-bendiksensvei.jpg",
+        "cap": "Perdy med to born i hagen, Bendiksensvei. Udatert."
+      },
+      {
+        "type": "image",
+        "src": "bileteslekt/martin-perdy-1946.jpg",
+        "cap": "Martin og Perdy. Bryllaupsfoto, 1946."
+      },
+      {
+        "type": "image",
+        "src": "bileteslekt/perdy-portrett.jpg",
+        "cap": "Perdy Aleksandra. Portrett, udatert."
       }
     ],
     "8": [
@@ -5418,6 +5555,16 @@
         "type": "image",
         "src": "bileteslekt/person-14.jpg",
         "cap": "Frå familiealbumet, merkt «Anton». Udatert. Varsamt restaurert: støv fjerna og tonebreidda retta opp; ingen fargar eller detaljar er lagde til."
+      },
+      {
+        "type": "image",
+        "src": "bileteslekt/familien-mortensen.jpg",
+        "cap": "Familien Mortensen: Anton og Agnes med borna. Udatert."
+      },
+      {
+        "type": "image",
+        "src": "bileteslekt/mortensen-gard.jpg",
+        "cap": "Frå familiealbumet, merkt «Bestemor, Perdy, Anton og Jørgen». På garden med eit lam. Udatert."
       }
     ],
     "18": [
@@ -5495,6 +5642,18 @@
         "type": "image",
         "src": "bileteslekt/peder-mork.jpg",
         "cap": "Peder Chrispinussen Mørk, ordførar i Ytre Holmedal (Fjaler) 1863–1868. Bilete tilført av familien."
+      }
+    ],
+    "15": [
+      {
+        "type": "image",
+        "src": "bileteslekt/familien-mortensen.jpg",
+        "cap": "Familien Mortensen: Anton og Agnes med borna. Udatert."
+      },
+      {
+        "type": "image",
+        "src": "bileteslekt/mortensen-gard.jpg",
+        "cap": "Frå familiealbumet, merkt «Bestemor, Perdy, Anton og Jørgen». På garden med eit lam. Udatert."
       }
     ]
   },
