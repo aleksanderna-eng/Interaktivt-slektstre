@@ -4,7 +4,7 @@
     .slekt-app *{box-sizing:border-box}.slekt-shell{padding:24px}.slekt-hero{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:start;padding:6px 2px 20px;border-bottom:1px solid var(--line)}
     .slekt-kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--moss);font-weight:800}.slekt-title{font-family:Georgia,"Times New Roman",serif;font-size:clamp(26px,4.2vw,42px);line-height:.98;margin:7px 0 10px;font-weight:700;letter-spacing:-.035em}.slekt-sub{color:var(--muted);line-height:1.55;max-width:650px;margin:0;font-size:14px}.slekt-mark{width:90px;height:90px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,color-mix(in srgb,var(--gold) 46%,var(--card)),color-mix(in srgb,var(--pine) 88%,black));color:white;font-family:Georgia,serif;font-size:29px;border:4px solid color-mix(in srgb,var(--gold) 60%,var(--card));box-shadow:0 8px 22px color-mix(in srgb,var(--ink) 16%,transparent)}
     .slekt-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:18px 0}.slekt-stat{background:color-mix(in srgb,var(--card) 90%,var(--panel));border:1px solid var(--line);border-radius:14px;padding:12px}.slekt-stat strong{display:block;font-family:Georgia,serif;font-size:25px;color:var(--accent)}.slekt-stat span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.status-bar{display:flex;height:6px;border-radius:999px;overflow:hidden;margin:-8px 0 4px;border:1px solid var(--line)}.status-bar i{display:block;height:100%}.status-bar .sb-doc{background:var(--pine)}.status-bar .sb-fam{background:var(--violet)}.status-bar .sb-prob{background:var(--gold)}.status-bar .sb-open{background:color-mix(in srgb,var(--open) 38%,var(--card))}
-    .fan-wrap{margin:14px 0 2px;border:1px solid var(--line);border-radius:15px;background:color-mix(in srgb,var(--card) 94%,var(--panel));overflow:hidden}.fan-wrap summary{cursor:pointer;padding:11px 14px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);list-style:none;display:flex;align-items:center;gap:8px}.fan-wrap summary::before{content:"";width:0;height:0;border-left:5px solid var(--moss);border-top:4px solid transparent;border-bottom:4px solid transparent;transition:transform .15s}.fan-wrap[open] summary::before{transform:rotate(90deg)}.fan-wrap summary::-webkit-details-marker{display:none}.fan-holder{padding:2px 10px 0}.fan-holder svg{display:block;width:100%;height:auto;max-height:330px;margin:0 auto}.fan-caption{margin:6px 14px 12px;font-size:11px;color:var(--muted);line-height:1.4}
+    .fan-wrap{margin:14px 0 2px;border:1px solid var(--line);border-radius:15px;background:color-mix(in srgb,var(--card) 94%,var(--panel));overflow:hidden}.fan-wrap summary{cursor:pointer;padding:11px 14px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);list-style:none;display:flex;align-items:center;gap:8px}.fan-wrap summary::before{content:"";width:0;height:0;border-left:5px solid var(--moss);border-top:4px solid transparent;border-bottom:4px solid transparent;transition:transform .15s}.fan-wrap[open] summary::before{transform:rotate(90deg)}.fan-wrap summary::-webkit-details-marker{display:none}.fan-holder{padding:2px 10px 0}.fan-holder svg{display:block;width:100%;height:auto;max-height:330px;margin:0 auto}.fan-caption{margin:6px 14px 12px;font-size:11px;color:var(--muted);line-height:1.4}.fan-seg.named{stroke:#fff;stroke-width:2.4;filter:brightness(1.16) saturate(1.12) drop-shadow(0 0 3px color-mix(in srgb,var(--ink) 55%,transparent))}.name-active .fan-seg:not(.named){opacity:.55;transition:opacity .2s ease}.name-active .fan-seg.named{opacity:1}.namecloud{display:flex;flex-wrap:wrap;gap:7px 9px;align-items:center;justify-content:center;padding:8px 14px 12px}.name-pill{display:inline-flex;align-items:baseline;gap:5px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:4px 12px;cursor:pointer;line-height:1.1;font-family:Georgia,serif;font-weight:700;transition:border-color .15s,background .15s,color .15s}.name-pill:hover{border-color:var(--moss)}.name-pill.active{background:var(--pine);color:#fff;border-color:var(--pine)}.name-pill-n{font-family:system-ui,sans-serif;font-size:10px;font-weight:800;color:var(--muted);letter-spacing:.02em}.name-pill.active .name-pill-n{color:color-mix(in srgb,#fff 82%,transparent)}.namecloud-results{padding:0 14px 14px}.namecloud-results[hidden]{display:none}.namecloud-head{font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin:2px 0 8px}.namecloud-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
     .fan-seg{stroke:var(--card);stroke-width:1.4;cursor:pointer;transition:filter .18s ease,fill .28s ease,stroke-width .18s ease}.fan-seg:hover{filter:brightness(1.1)}.fan-seg.documented{fill:var(--pine)}.fan-seg.family{fill:var(--violet)}.fan-seg.probable{fill:var(--gold)}.fan-seg.open{fill:color-mix(in srgb,var(--open) 26%,var(--card))}.fan-seg.fan-future{cursor:default}.fan-seg.fan-future:hover{filter:none}.fan-seg.selected{stroke:var(--ink);stroke-width:2.6;filter:brightness(1.2) drop-shadow(0 2px 5px color-mix(in srgb,var(--ink) 38%,transparent))}.kinship-line{fill:none;stroke:#e6d7b6;stroke-width:3;stroke-linecap:round;opacity:1;pointer-events:none;filter:drop-shadow(0 0 2.5px color-mix(in srgb,var(--ink) 62%,transparent)) drop-shadow(0 1px 1.5px color-mix(in srgb,var(--ink) 35%,transparent))}.fan-center-label{font-family:Georgia,serif;font-size:15px;font-weight:700;fill:white;text-anchor:middle;pointer-events:none}
     @keyframes detail-in{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
     #detail-panel.detail-anim{animation:detail-in .24s ease}
@@ -52,6 +52,12 @@
       <div class="fan-holder" id="fan-holder"></div>
       <div class="fan-actions"><button class="clear-focus" id="clear-focus" type="button" hidden>✕ Vis heile vifta att</button></div>
       <p class="fan-caption">Farssida til venstre, morssida til høgre. Sjuande ring: <strong>48 grøne segment</strong>, 13 gule og 3 heilt opne plassar. Dei 47 grøne segmenta svarar til 43 ulike dokumenterte personar, sidan nokre anar står to gonger ved ahnenverlust. Åttande ring har <strong>47 fylte plassar</strong> av 128, 33 grøne og 14 gule. Fjorten av dei kom frå folketeljinga 1801: foreldrepara på Hus og Veiteberg i Jølster, på Vagstad og Rivedal i Ytre Holmedal, på Stranden i Askøy og på Volle i Ulstein. Iver Clemetsen på Brattelie er stadfesta grøn gjennom Fjaler-bygdeboka. Dei sju gule er Anne Johannesdatter på Brattelie, Klemet Andersson Hauge på Hauge, Agothe Eliasdatter på Hus, foreldreparet Ole Simonsen og Nille Amundsdatter på Volle, og Simon Torgeirson og Anne Eriksdatter på Hegrenes.</p>
+    </details>
+
+    <details class="fan-wrap namecloud-wrap" open>
+      <summary>Namnesky · dei 12 vanlegaste fornamna</summary>
+      <div class="namecloud" id="namecloud"></div>
+      <div class="namecloud-results" id="namecloud-results" hidden></div>
     </details>
 
     <section class="slekt-toolbar">
@@ -123,6 +129,7 @@
     ];
     const genNames=["Deg","Foreldre","Besteforeldre","Oldeforeldre","Tippoldeforeldre","Tipptippoldeforeldre","Tipptipptippoldeforeldre"];
     let currentBranch="all", selectedId=1;
+    let activeName=null, topNames=[];
     const FAN={cx:420, cy:420, r0:42, ring:53};
     function centroidFromAh(ah){
       if(ah<=1) return [FAN.cx, FAN.cy+FAN.r0*0.35];
@@ -156,11 +163,49 @@
     }
     function updateClearBtn(){
       const btn=$("clear-focus"); if(!btn) return;
-      btn.hidden = !(selectedId!=null && selectedId!==1);
+      btn.hidden = !((selectedId!=null && selectedId!==1) || activeName);
     }
     function clearSelection(){
-      selectedId=null; mediaIndex=0;
+      selectedId=null; mediaIndex=0; activeName=null;
+      renderNameCloud(); applyNameHighlight(); renderNameResults();
       renderTree(); renderDetail(); updateFanSelection();
+    }
+    // ---- Namnesky ----
+    function firstName(name){ return (name||"").trim().split(/\s+/)[0].replace(/[()]/g,""); }
+    function computeTopNames(){
+      const map=new Map();
+      for(const id in people){ const fn=firstName(people[id].name); if(!fn) continue; if(!map.has(fn)) map.set(fn,[]); map.get(fn).push(Number(id)); }
+      topNames=[...map.entries()].map(([name,ids])=>({name,ids})).sort((a,b)=>b.ids.length-a.ids.length).slice(0,12);
+    }
+    function nameIds(){ if(!activeName) return []; const t=topNames.find(x=>x.name===activeName); return t?t.ids:[]; }
+    function renderNameCloud(){
+      const host=$("namecloud"); if(!host) return;
+      if(!topNames.length){ host.innerHTML=""; return; }
+      const max=topNames[0].ids.length, min=topNames[topNames.length-1].ids.length;
+      host.innerHTML=topNames.map(t=>{
+        const f=max===min?1:(t.ids.length-min)/(max-min);
+        const size=(12.5+f*9.5).toFixed(1);
+        const active=t.name===activeName?"active":"";
+        return `<button class="name-pill ${active}" data-name="${t.name}" style="font-size:${size}px"><span class="name-pill-txt">${t.name}</span><span class="name-pill-n">${t.ids.length}</span></button>`;
+      }).join("");
+    }
+    function applyNameHighlight(){
+      const set=new Set(nameIds());
+      document.querySelectorAll(".fan-seg").forEach(el=>el.classList.toggle("named", set.has(Number(el.dataset.person))));
+      const svg=document.querySelector("#fan-holder svg");
+      if(svg) svg.classList.toggle("name-active", !!activeName);
+    }
+    function renderNameResults(){
+      const host=$("namecloud-results"); if(!host) return;
+      const ids=nameIds();
+      if(!ids.length){ host.hidden=true; host.innerHTML=""; return; }
+      host.hidden=false;
+      const cards=ids.map(id=>people[id]?card(people[id]):"").join("");
+      host.innerHTML=`<div class="namecloud-head">${ids.length} personar med namnet «${activeName}»</div><div class="namecloud-grid">${cards}</div>`;
+    }
+    function selectName(name){
+      activeName=(activeName===name)?null:name;
+      renderNameCloud(); applyNameHighlight(); renderNameResults(); updateClearBtn();
     }
 
     function idsForBranch(root){
@@ -485,6 +530,8 @@
         document.querySelector(".slekt-detail").scrollIntoView({behavior:"smooth",block:"start"});
         return;
       }
+      const nameEl=e.target.closest("[data-name]");
+      if(nameEl){ selectName(nameEl.dataset.name); return; }
       const personEl=e.target.closest("[data-person]");
       if(personEl){
         selectPerson(Number(personEl.dataset.person));
@@ -505,9 +552,10 @@
     });
     function boot(){
       computeDerived();
+      computeTopNames();
       const q=new URLSearchParams(location.search).get("person");
       if(q && people[q]){ selectedId=Number(q); currentBranch=branchFor(selectedId); }
-      renderStats();renderFan();renderChips();renderTree();renderDetail();
+      renderStats();renderFan();renderChips();renderNameCloud();renderTree();renderDetail();
       if(q && people[q]) setTimeout(()=>{ const el=document.getElementById("detail-panel"); if(el&&el.scrollIntoView) el.scrollIntoView({behavior:"smooth",block:"center"}); },120);
     }
     fetch("slektstre-data.json")
